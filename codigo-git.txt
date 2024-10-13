@@ -8,6 +8,27 @@ git init
 ls -a
 git add .
 git commit -m "estado inicial" 
+enlazar desde mi pc a la plataforma en la red
+    web github / new repository
+    https://github.com/yonarev/php-backend
+    aparece esto en github EJECUTAR
+        …or create a new repository on the command line
+            echo "# php-backend" >> README.md
+            git init
+            git add README.md
+            git commit -m "first commit"
+            git branch -M main
+            git remote add origin https://github.com/yonarev/php-backend.git
+            git push -u origin main
+    git remote set-url origin git@github.com:yonarev/php-backend.git  
+    git branch -M main
+    git push -u origin main
+        pide frase magica 
 
 git status
 Git log
+---------------------
+comandos diarios
+git add .
+git commit -m "1- tablas creadas editando administra.php inicio.php index.php"
+git push -u origin main
