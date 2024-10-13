@@ -34,4 +34,5 @@ if (empty($_SESSION)) {
 }
 
 echo '<p><a href="inicio.php">Volver al inicio</a></p>';
+echo '<p><a href="index.php">Volver al Indice</a></p>';
 ?>

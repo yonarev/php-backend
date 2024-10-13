@@ -1,8 +1,6 @@
-ssh-keygen -t rsa -b 4096 -C "creacion claves pp"
-eval "$(ssh-agent -s)"
-git config --global user.name "yonarev"
-git config --global user.email jorgeveravidela@gmail.com
-git config --list
+
+
+https://github.com/yonarev/php-backend
 ----------------SOLO ABAJO -----
 git init
 ls -a
@@ -31,4 +29,35 @@ Git log
 comandos diarios
 git add .
 git commit -m "1- tablas creadas editando administra.php inicio.php index.php"
+git push -u origin main
+--------------------
+jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/PHP-BACK-END-capacitate (main)
+    $ git log
+        commit fe31bbd64f3ef6271e0845f9b4ce283fa58a9e8d (HEAD -> main, origin/main)
+        Author: yonarev <jorgeveravidela@gmail.com>
+        Date:   Sun Oct 13 15:46:54 2024 -0300
+
+            1- tablas creadas editando administra.php inicio.php index.php
+
+        commit 47256c65bf068a6a6e432e327f4fb1369411745b
+        Author: yonarev <jorgeveravidela@gmail.com>
+        Date:   Sun Oct 13 15:38:49 2024 -0300
+
+            first commit
+
+        commit 48bd31380cdce5da9c1ed62afeab11aedc45e8ab
+        Author: yonarev <jorgeveravidela@gmail.com>
+        Date:   Sun Oct 13 15:31:45 2024 -0300
+
+            estado inicial
+
+jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/PHP-BACK-END-capacitate (main)
+    $ git status
+        On branch main
+        Your branch is up to date with 'origin/main'.
+
+        nothing to commit, working tree clean
+13/10/2024 20_56 
+git add .
+git commit -m "2 - edicion index.html, administra.php, registro.php, sesion.php"
 git push -u origin main

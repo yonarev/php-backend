@@ -1,6 +1,7 @@
 <?php
 //<!-- http://localhost:8080/dashboard/calificaciones/index.php -->
-session_start(); // Iniciar sesión al principio del archivo
+// Iniciar sesión al principio del archivo
+session_start(); 
 
 // Comprobar si el usuario ha iniciado sesión
 if (!isset($_SESSION['tipo_usu'])) {
@@ -29,11 +30,26 @@ if (!isset($_SESSION['tipo_usu'])) {
                 <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Superusuario'): ?>
                     <li><a href="administra.php">Administrar</a></li>
                 <?php endif; ?>
-
-                <li><a href="profesores.php">Profesores</a></li>
-                <li><a href="alumnos.php">Alumnos</a></li>
-                <li><a href="calificaciones.php">Calificaciones</a></li>
+                <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Administrador'): ?>
+                    <li><a href="permisos.php">Permisos</a></li>
+                <?php endif; ?>
+                <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Profesor'): ?>
+                    <li><a href="profesores.php">Profesores</a></li>
+                <?php endif; ?>
+                <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Alumno'): ?>
+                    <li><a href="alumnos.php">Alumnos</a></li>
+                <?php endif; ?>
+                <!-- <li><a href="profesores.php">Profesores</a></li> -->
+                <!-- <li><a href="alumnos.php">Alumnos</a></li> -->
+                <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Profesor'): ?>
+                    <li><a href="calificaciones.php">Calificaciones</a></li>
+                <?php endif; ?>
+                <li><a href="ver_calificaciones.php">Ver Calificaciones</a></li>
+                <!-- <li><a href="calificaciones.php">Calificaciones</a></li> -->
                 <li><a href="registro.php">Registro</a></li>
+                <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Superusuario'): ?>
+                    <li><a href="sesion.php">Sesion</a></li>
+                <?php endif; ?>
                 <li><a href="ayuda.php">Ayuda en línea</a></li>
             </ul>
         </nav>

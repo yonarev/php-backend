@@ -180,7 +180,7 @@ Una  escuela  requiere  de  un  sistema  para  el  registro  de  calificaciones.
                 tipo_log ENUM('Alumno', 'Profesor', 'Administrador','Superusuario', 'Visita'),
                 fecha_log DATE,
                 hora_ini_log TIME,
-                hora_fin_log TIME,
+                hora_fin_log TIME,//quitar
                 reg_log TEXT
                 FOREIGN KEY (id_usu) REFERENCES usuarios(id_usu) -- Referencia al usuario
             );

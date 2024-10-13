@@ -1,116 +1,127 @@
 <?php
-// http://localhost:8080/dashboard/calificaciones/administra.php
-// Incluimos el archivo de conexión a la base de datos
-include 'conecta.php';
-
-// Verificamos si el usuario tiene permisos de superusuario antes de mostrar el contenido
-session_start();
-if (!isset($_SESSION['tipo_usu']) || $_SESSION['tipo_usu'] != 'Superusuario') {
-    echo "No tienes permisos para acceder a esta página.";
-    exit;
-}
-
-// Conectamos a la base de datos
-$conexion = conectar_bd();
-
-// Inicializamos las variables para el formulario
-$id_usu = $nombre = $apellidos = $correo = '';
-
-// Cargar datos si se solicita modificar
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['accion']) && $_POST['accion'] == 'modificar') {
-    $id_usu = $_POST['id_usu'];
-    $nombre = $_POST['nombre'];
-    $apellidos = $_POST['apellidos'];
-    $correo = $_POST['correo'];
-}
-
-// Crear un nuevo administrador
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['accion']) && $_POST['accion'] == 'crear') {
-    $nombre = $_POST['nombre'];
-    $apellidos = $_POST['apellidos'];
-    $correo = $_POST['correo'];
-    $psw = password_hash($_POST['psw'], PASSWORD_DEFAULT);
-
-    try {
-        $query = "INSERT INTO usuarios (tipo_usu, nombre, apellidos, correo, psw) VALUES ('Administrador', :nombre, :apellidos, :correo, :psw)";
-        $stmt = $conexion->prepare($query);
-        $stmt->bindParam(':nombre', $nombre);
-        $stmt->bindParam(':apellidos', $apellidos);
-        $stmt->bindParam(':correo', $correo);
-        $stmt->bindParam(':psw', $psw);
-        $stmt->execute();
-        echo "Administrador creado correctamente.";
-        // Reiniciar los campos del formulario
-        $id_usu = $nombre = $apellidos = $correo = '';
-        echo "<script>resetForm();</script>"; // Llamar a resetForm para limpiar el formulario
-    } catch (PDOException $e) {
-        echo "Error al crear administrador: " . $e->getMessage();
+    // http://localhost:8080/dashboard/calificaciones/administra.php
+    // Incluimos el archivo de conexión a la base de datos
+    include_once 'conecta.php';
+    include_once 'registro.php';
+    // Verificamos si el usuario tiene permisos de superusuario antes de mostrar el contenido
+    session_start();
+    if (!isset($_SESSION['tipo_usu']) || $_SESSION['tipo_usu'] != 'Superusuario') {
+        echo "No tienes permisos para acceder a esta página.";
+        exit;
     }
-}
 
-// Actualizar un administrador
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['accion']) && $_POST['accion'] == 'actualizar') {
-    $id_usu = $_POST['id_usu'];
-    $nombre = $_POST['nombre'];
-    $apellidos = $_POST['apellidos'];
-    $correo = $_POST['correo'];
-    $psw = isset($_POST['psw']) ? password_hash($_POST['psw'], PASSWORD_DEFAULT) : null;
+    // Conectamos a la base de datos
+    $conexion = conectar_bd();
 
-    try {
-        // Comprobar si se quiere actualizar la contraseña
-        if ($psw) {
-            $query = "UPDATE usuarios SET nombre = :nombre, apellidos = :apellidos, correo = :correo, psw = :psw WHERE id_usu = :id_usu AND tipo_usu = 'Administrador'";
+    // Inicializamos las variables para el formulario
+    $id_usu = $nombre = $apellidos = $correo = '';
+    $id_activo=id_sesion();
+    $id_tipo=tipo_sesion();
+    // Cargar datos si se solicita modificar
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['accion']) && $_POST['accion'] == 'modificar') {
+        $id_usu = $_POST['id_usu'];
+        $nombre = $_POST['nombre'];
+        $apellidos = $_POST['apellidos'];
+        $correo = $_POST['correo'];
+    }
+
+    // Crear un nuevo administrador
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['accion']) && $_POST['accion'] == 'crear') {
+        $nombre = $_POST['nombre'];
+        $apellidos = $_POST['apellidos'];
+        $correo = $_POST['correo'];
+        $psw = password_hash($_POST['psw'], PASSWORD_DEFAULT);
+
+        try {
+            $query = "INSERT INTO usuarios (tipo_usu, nombre, apellidos, correo, psw) VALUES ('Administrador', :nombre, :apellidos, :correo, :psw)";
             $stmt = $conexion->prepare($query);
+            $stmt->bindParam(':nombre', $nombre);
+            $stmt->bindParam(':apellidos', $apellidos);
+            $stmt->bindParam(':correo', $correo);
             $stmt->bindParam(':psw', $psw);
-        } else {
-            $query = "UPDATE usuarios SET nombre = :nombre, apellidos = :apellidos, correo = :correo WHERE id_usu = :id_usu AND tipo_usu = 'Administrador'";
-            $stmt = $conexion->prepare($query);
+            $stmt->execute();
+            echo "Administrador creado correctamente.";
+            //registro
+            $reg_log="Ingresó el administrador con correo: ". $correo;
+            registrar("usuarios", $id_activo, $id_tipo, $reg_log);
+            // Reiniciar los campos del formulario
+            $id_usu = $nombre = $apellidos = $correo = '';
+            //cerrar conexion
+            echo "<script>resetForm();</script>"; // Llamar a resetForm para limpiar el formulario
+        } catch (PDOException $e) {
+            echo "Error al crear administrador: " . $e->getMessage();
         }
-
-        $stmt->bindParam(':nombre', $nombre);
-        $stmt->bindParam(':apellidos', $apellidos);
-        $stmt->bindParam(':correo', $correo);
-        $stmt->bindParam(':id_usu', $id_usu);
-        $stmt->execute();
-        echo "Administrador actualizado correctamente.";
-        // Reiniciar los campos del formulario
-        $id_usu = $nombre = $apellidos = $correo = '';
-        echo "<script>resetForm();</script>"; // Llamar a resetForm para limpiar el formulario
-    } catch (PDOException $e) {
-        echo "Error al actualizar administrador: " . $e->getMessage();
     }
-}
 
-// Eliminar un administrador
-if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['accion']) && $_POST['accion'] == 'eliminar') {
-    $id_usu = $_POST['id_usu'];
+    // Actualizar un administrador
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['accion']) && $_POST['accion'] == 'actualizar') {
+        $id_usu = $_POST['id_usu'];
+        $nombre = $_POST['nombre'];
+        $apellidos = $_POST['apellidos'];
+        $correo = $_POST['correo'];
+        $psw = isset($_POST['psw']) ? password_hash($_POST['psw'], PASSWORD_DEFAULT) : null;
 
-    try {
-        $query = "DELETE FROM usuarios WHERE id_usu = :id_usu AND tipo_usu = 'Administrador'";
-        $stmt = $conexion->prepare($query);
-        $stmt->bindParam(':id_usu', $id_usu);
-        $stmt->execute();
-        echo "Administrador eliminado correctamente.";
-    } catch (PDOException $e) {
-        echo "Error al eliminar administrador: " . $e->getMessage();
+        try {
+            // Comprobar si se quiere actualizar la contraseña
+            if ($psw) {
+                $query = "UPDATE usuarios SET nombre = :nombre, apellidos = :apellidos, correo = :correo, psw = :psw WHERE id_usu = :id_usu AND tipo_usu = 'Administrador'";
+                $stmt = $conexion->prepare($query);
+                $stmt->bindParam(':psw', $psw);
+            } else {
+                $query = "UPDATE usuarios SET nombre = :nombre, apellidos = :apellidos, correo = :correo WHERE id_usu = :id_usu AND tipo_usu = 'Administrador'";
+                $stmt = $conexion->prepare($query);
+            }
+
+            $stmt->bindParam(':nombre', $nombre);
+            $stmt->bindParam(':apellidos', $apellidos);
+            $stmt->bindParam(':correo', $correo);
+            $stmt->bindParam(':id_usu', $id_usu);
+            $stmt->execute();
+            echo "Administrador actualizado correctamente.";
+             //registro
+             $reg_log="se actualizo el administrador con id: ". strval($id_usu) ." Nombre y apellido: ". $nombre . " " . $apellidos . " Correo: " . $correo;
+             registrar("usuarios", $id_activo, $id_tipo, $reg_log);
+            // Reiniciar los campos del formulario
+            $id_usu = $nombre = $apellidos = $correo = '';
+            echo "<script>resetForm();</script>"; // Llamar a resetForm para limpiar el formulario
+        } catch (PDOException $e) {
+            echo "Error al actualizar administrador: " . $e->getMessage();
+        }
     }
-}
 
-// Función para obtener administradores existentes
-function obtenerAdministradores($conexion) {
-    try {
-        $query = "SELECT id_usu, nombre, apellidos, correo FROM usuarios WHERE tipo_usu = 'Administrador'";
-        $stmt = $conexion->prepare($query);
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        echo "Error al obtener administradores: " . $e->getMessage();
-        return [];
+    // Eliminar un administrador
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['accion']) && $_POST['accion'] == 'eliminar') {
+        $id_usu = $_POST['id_usu'];
+
+        try {
+            $query = "DELETE FROM usuarios WHERE id_usu = :id_usu AND tipo_usu = 'Administrador'";
+            $stmt = $conexion->prepare($query);
+            $stmt->bindParam(':id_usu', $id_usu);
+            $stmt->execute();
+            echo "Administrador eliminado correctamente.";
+            //registro
+            $reg_log="se elimino el administrador con id: ". strval($id_usu);
+            registrar("usuarios", $id_activo, $id_tipo, $reg_log);
+        } catch (PDOException $e) {
+            echo "Error al eliminar administrador: " . $e->getMessage();
+        }
     }
-}
 
-// Obtener la lista de administradores después de cada acción
-$administradores = obtenerAdministradores($conexion);
+    // Función para obtener administradores existentes
+    function obtenerAdministradores($conexion) {
+        try {
+            $query = "SELECT id_usu, nombre, apellidos, correo FROM usuarios WHERE tipo_usu = 'Administrador'";
+            $stmt = $conexion->prepare($query);
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            echo "Error al obtener administradores: " . $e->getMessage();
+            return [];
+        }
+    }
+
+    // Obtener la lista de administradores después de cada acción
+    $administradores = obtenerAdministradores($conexion);
 ?>
 
 <!DOCTYPE html>
