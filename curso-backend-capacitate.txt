@@ -1,0 +1,2563 @@
+Tecnología
+    Desarrollador Back-end
+        https://capacitateparaelempleo.org/cursos/view/121
+        Duración: 106 h
+
+Introducción
+    El desarrollador back-end es el encargado de 
+    implementar la interacción entre el usuario y el sitio web. 
+    Utiliza lenguajes de programación para desarrollar 
+    módulos de procesamiento que otorguen a los usuarios 
+    contenido dinámico basado en las peticiones de entrada. 
+    Almacena información de valor utilizando bases de datos 
+    y otorga un alto nivel operacional a sitios como 
+    las redes sociales, páginas de compras por internet 
+    y a la mayoría de páginas web actuales.
+
+Funcionamiento de la arquitectura cliente-servidor
+    Comprende el proceso de ejecución de una página web 
+    mediante el funcionamiento representado en la arquitectura cliente-servidor.
+    Nivel 1
+    Lección 1
+    Video 1
+    la arquitectura cliente-servidor:
+        Es un modelo de comunicación en red donde hay dos partes principales: 
+            el cliente y el servidor.
+        El cliente es el dispositivo del usuario que solicita servicios o recursos. 
+            Puede ser una computadora, tablet o smartphone.
+        El servidor es un sistema centralizado que proporciona los servicios 
+            o recursos solicitados por el cliente. 
+            Puede ser un programa, una computadora o un conjunto de ellas.
+        Cuando el cliente necesita un recurso, 
+            envía una solicitud al servidor a través de la red. 
+            El servidor procesa la solicitud, 
+            realiza las acciones necesarias 
+            y envía la respuesta al cliente.
+
+        Esta arquitectura permite una distribución de tareas y recursos, 
+            facilitando 
+                la gestión 
+                y el mantenimiento del sistema. 
+            También permite la comunicación y el intercambio de datos 
+            entre múltiples clientes y servidores.
+        Algunos ejemplos comunes son 
+            el correo electrónico, 
+            la navegación web 
+            y las aplicaciones en la nube. 
+            
+        El cliente utiliza un programa (como un navegador) 
+        para conectarse a un servidor (como un sitio web) 
+        y acceder a sus servicios.
+
+Funcionamiento Modelo Vista Controlador
+    Comprende el proceso de ejecución de una página web mediante 
+    el funcionamiento representado en el patrón de diseño MVC.
+    Nivel 1
+    Lección 1
+    Video 2
+
+    MVC es un acrónimo para Modelo, Vista y Controlador. Es un patrón de diseño que separa la lógica de negocios, la presentación y la interacción con el usuario en tres componentes.
+        Modelo: 
+            Es la representación de los datos y la lógica de negocios. 
+            Contiene las estructuras de datos, las reglas y las operaciones 
+            que se pueden realizar sobre los datos.
+        Vista: 
+            Es la presentación de los datos al usuario. 
+            Muestra la información en un formato adecuado 
+            y permite la interacción con el usuario.
+        Controlador: 
+            Es el intermediario entre el Modelo y la Vista. 
+            Recibe las acciones del usuario, 
+            las procesa 
+            y actualiza el Modelo 
+            y la Vista según sea necesario.
+
+        La separación de estos componentes permite una mejor organización del código, 
+            facilita el mantenimiento 
+            y mejora la reutilización de componentes.
+
+        Este patrón es ampliamente utilizado en el desarrollo de 
+            aplicaciones web y móviles, 
+            ya que permite una clara separación de responsabilidades 
+            y facilita el trabajo en equipo.
+
+Diferencia entre programación y diseño web.pd
+    La programación y el diseño web son dos aspectos fundamentales en la creación de sitios
+    y aplicaciones en línea. A continuación, se presentan las diferencias clave entre ellos:
+    Programación web
+    La programación web se enfoca en el desarrollo de la lógica y la funcional
+    idad de un sitio o aplicación en línea. Implica escribir código en lenguajes de program
+    ción como HTML, CSS, JavaScript, PHP, Python, Ruby, etc. para crear funcional
+    idades como la autenticación, la gestión de datos, la interacción con bases de datos
+    y la creación de interfaces de usuario.
+    Diseño web
+    El diseño web se enfoca en la creación de la experiencia del usuario y la presentación visual
+    de un sitio o aplicación en línea. Implica utilizar herramientas como Adobe Creative Cloud, Sketch,
+    Figma, etc. para crear diseños atractivos y funcionales que se adapten a
+    las necesidades del usuario.
+
+    Entender la diferencia entre diseño y programación web te será de ayuda 
+    DISEÑO 
+    WEB
+        al momento de proponer soluciones ante los 
+        requerimientos definidos por el cliente.
+            Su objetivo principal es definir el formato y el diseño visual de una página web.
+            Diseña la apariencia estética del sitio.
+            Especifica aspectos relacionados con la experiencia del usuario.
+            Define la distribución del contenido que se muestra en la página.
+            Y selecciona los colores que se van a utilizar en el sitio.
+        Estas acciones diseñan un sitio fácil de usar y que cumpla con los requerimientos establecidos por el cliente.
+    PROGRAMACIÓN 
+    WEB
+        Se encarga de desarrollar las funciones de un sitio, como son:
+            La gestión de contenido. 
+            Almacenamiento de información.
+            El comercio por internet. 
+            El registro de usuarios.
+            Aplicación que implique la interacción con una base de datos.
+
+        Los módulos implementados con estas características ayudarán a que los usuarios interactúen de manera directa
+        con el sitio y puedan realizar funciones específicas en éste.
+
+Diferencia entre páginas web estáticas y dinámicas
+    Determina la estructura de una página web basando 
+    su criterio en la diferencia entre las páginas web estáticas y dinámicas.
+    Nivel 1
+    Lección 1
+    Video 3
+
+    Páginas web estáticas:
+        Contenido fijo que no cambia.
+        HTML, CSS y JavaScript estáticos.
+        Carga rápida, buen rendimiento.
+        Fáciles de crear y alojar.
+        Ideales para sitios pequeños, landing pages o presentaciones.
+
+    Páginas web dinámicas:
+        Contenido que cambia según la interacción del usuario o los datos.
+        Utilizan tecnologías del lado del servidor (PHP, ASP, JSP) y bases de datos.
+        Personalización y actualización frecuente del contenido.
+        Mayor complejidad y recursos necesarios.
+        Permiten funcionalidades avanzadas e interactividad.
+    En resumen, 
+        las páginas web estáticas son fijas y sencillas,
+        mientras que las dinámicas son interactivas y personalizables. 
+        La elección depende de las necesidades y objetivos del sitio web.
+
+Funcionamiento e impacto del back-end.pdf 
+    SITUACIONES Tareas del cliente ? Tareas del servidor ?
+        Situación 1
+        Un estudiante utiliza varias páginas 
+        de internet como fuente de 
+        consulta para realizar sus tareas. 
+        2
+        Una escuela primaria utiliza una 
+        plataforma  en  línea  para  que  los 
+        alumnos tomen clases de inglés. 
+        3
+        Una  empresa  utiliza  un  navegador 
+        privado para enviar y recibir 
+        correos de la institución. 
+        4
+        Un grupo de amigos utilizan su 
+        consola de videojuegos para jugar 
+        partidas cooperativas en línea. 
+
+        
+    
+        Situación 1:
+        Cliente: Solicita páginas web, renderiza contenido, envía consultas de búsqueda.
+        Servidor: Almacena y sirve páginas web, procesa consultas de búsqueda, devuelve resultados.
+
+        Situación 2:
+        Cliente: Accede a la plataforma, navega por el contenido, envía respuestas y actividades.
+        Servidor: Autentica usuarios, sirve contenido educativo, recopila y califica actividades.
+
+        Situación 3:
+        Cliente: Accede al correo web, compone y envía correos, descarga correos recibidos.
+        Servidor: Autentica usuarios, envía y recibe correos, almacena correos en la bandeja de entrada/salida.
+
+        Situación 4:
+        Cliente: Inicia sesión en el juego, envía comandos e interacciones, recibe actualizaciones del estado del juego.
+        Servidor: Autentica jugadores, sincroniza el estado del juego, gestiona partidas y comunicación entre jugadores.
+    
+    DIAGRAMA 
+        La vista envía la petición (5): El usuario interactúa con la interfaz (la vista) y realiza una solicitud (por ejemplo, al hacer clic en un botón o escribir en un campo).
+        El controlador procesa la petición (6): El controlador recibe la solicitud y la procesa. Esto puede incluir la validación de los datos, la preparación de los datos para el modelo y la decisión sobre qué acción realizar.
+        El controlador consulta al modelo (4): Si la solicitud requiere datos o cálculos más complejos, el controlador consulta al modelo.
+        El modelo busca los recursos (3): El modelo busca los datos necesarios en la base de datos u otras fuentes de información.
+        El modelo responde la solicitud (1): Una vez que el modelo tiene los resultados, los devuelve al controlador.
+        El controlador envía la respuesta (2): El controlador recibe la respuesta del modelo y la envía de vuelta a la vista para que se muestre al usuario.
+        
+        parece estar correctamente estructurado según el patrón MVC (Modelo-Vista-Controlador):
+
+        Vista (View) está a la izquierda, que es responsable de la presentación y la interfaz de usuario.
+        Controlador (Controller) está en el centro, actuando como intermediario que procesa las solicitudes y coordina las interacciones entre la Vista y el Modelo.
+        Modelo (Model) está a la derecha, manejando la lógica de datos y las reglas de negocio.
+        Las flechas en el diagrama también parecen indicar correctamente el flujo de información entre estos componentes. Aquí tienes un resumen de cómo debería funcionar:
+
+        La Vista envía la petición al Controlador.
+        El Controlador procesa la petición y consulta al Modelo.
+        El Modelo busca los recursos necesarios y responde al Controlador.
+        El Controlador envía la respuesta a la Vista para que se actualice.
+    
+    III. Relaciona las siguientes columna
+        Descripción	                                                            Componente
+        Se encarga del procesamiento de datos	                                c. Controlador
+        Su función principal es almacenar información	                        a. Modelo
+        Es la parte de la aplicación que se muestra al cliente	                b. Vista
+        Para su desarrollo se requieren de lenguajes de estilo y maquetación	b. Vista
+        Realiza consultas a la base de datos	                                a. Modelo
+        Es el módulo por el que se comunican los tres componentes	            c. Controlador
+        Funciona mediante un lenguaje de consultas	                            a. Modelo
+
+        Se encarga del procesamiento de datos - c. Controlador ✔️
+        Su función principal es almacenar información - a. Modelo ✔️
+        Es la parte de la aplicación que se muestra al cliente - b. Vista ✔️
+        Para su desarrollo se requieren de lenguajes de estilo y maquetación - b. Vista ✔️
+        Realiza consultas a la base de datos - a. Modelo ✔️
+        Es el módulo por el que se comunican los tres componentes - c. Controlador ✔️
+        Funciona mediante un lenguaje de consultas - a. Modelo ✔️
+                    
+    Qué significa que un sitio web sea estático o dinámico?
+
+        Sitio web estático: 
+            Su contenido es fijo y no cambia a menos que alguien modifique manualmente los archivos del sitio. Por lo general, son más simples y rápidos de cargar, pero ofrecen menos interactividad.
+        Sitio web dinámico: 
+            Su contenido puede cambiar automáticamente según las acciones del usuario, la fecha, la hora o cualquier otra variable. Esto se logra mediante tecnologías como PHP, JavaScript, etc., que permiten generar contenido al vuelo. Suelen ser más complejos, pero ofrecen una experiencia de usuario más rica y personalizada.
+        
+        ¿Cómo identificar si un sitio es estático o dinámico?
+
+        Extensión de los archivos: 
+            Los sitios estáticos suelen tener extensiones como HTML, CSS y JPG.
+             Los sitios dinámicos pueden tener extensiones como PHP, ASP, JSP, etc.
+        Interactividad: 
+            Si el sitio permite realizar acciones como 
+                registrarse, hacer comentarios, buscar información, etc., 
+                es muy probable que sea dinámico.
+        Contenido personalizado: 
+            Si el contenido se adapta a cada usuario o cambia con el tiempo, es un indicativo de que el sitio es dinámico.
+        Ejemplo de cómo completar la tabla:
+
+        Nombre del sitio	Propósito	Función Principal	Estático	Dinámico
+        Wikipedia	Enciclopedia en línea	Proporcionar información sobre cualquier tema		X
+        Mi página personal	Mostrar mi portafolio y contacto	Presentar información sobre mí		X
+        Tienda en línea de ropa	Vender ropa	Permitir a los usuarios comprar productos		X
+        Página de un restaurante	Mostrar el menú y permitir reservas	Informar sobre los platos y servicios		X
+        Blog personal	Compartir mis opiniones y experiencias	Publicar artículos y permitir comentarios		X        
+
+EXAMEN Tu calificación: 9
+    Pregunta 1
+        En una página de comercio electrónico, 
+        el listado de productos muestra algunos duplicados, 
+        provocando una confusión con el número total de productos disponibles. 
+        Si se asegura que el proceso de listado NO presenta ningún error, 
+        ¿cuál de las partes del patrón MVC presenta la falla?
+            Controlador
+            Vista
+           ƒ Modelo
+    Pregunta 2
+        Organiza los siguientes pasos a manera de representar el funcionamiento del patrón MVC:
+
+            La Vista envía una petición al Controlador
+            El Controlador envía una petición al Modelo
+            El Modelo ejecuta la petición
+            El Modelo responde la petición
+            El Controlador responde la petición
+
+            La Vista muestra la respuesta
+
+    Pregunta 3
+        Selecciona dos de las funciones que se deben implementar 
+        con programación web:
+
+            ƒ Almacenamiento de datos
+            ƒ Funcionalidad del sitio
+            Formato de la página
+            Contenido visual
+
+    Pregunta 4
+        Selecciona en cuál de los siguientes casos la programación 
+        tiene un mayor peso que el diseño web.
+
+            Un sitio interno de una empresa que sirva para coordinar el flujo de trabajo
+            Una página informativa sobre una empresa que ofrece servicios de consultoría
+        mo es  x  ƒ Un sitio web que utiliza efectos para llamar la atención de los usuarios
+    Pregunta 5
+        Una empresa requiere de una página sencilla en donde se registren las salidas 
+        y entradas de los colaboradores. Como es un proyecto pequeño, 
+        se decide desarrollar un sitio web estático. 
+        ¿Es correcta la decisión de desarrollar un sitio estático?
+
+            Si, el proyecto sólo requiere de la implementación de un número muy pequeño de páginas
+            ƒ No, el proyecto requiere de un modelo de datos y las páginas estáticas no lo cumplen
+             Si, como el proyecto es sencillo no es necesario el desarrollo de un sitio dinámico
+
+    Pregunta 6
+        Una empresa requiere una página en donde se publiquen, de manera continua, 
+        los eventos y las noticias más destacadas de la semana. 
+        ¿Qué tipo de página web debes desarrollar?
+
+            ƒ Una página web dinámica que permita la actualización del contenido
+            Una página estática por cada noticia y evento que se suscite
+            Una página estática que permita la actualización de los eventos
+    Pregunta 7
+        Selecciona dos de las funciones que se deben implementar en el diseño web.
+
+            ƒ Formato de la página
+            ƒ Usabilidad
+            Almacenamiento
+            Funcionalidad del sitio
+    Pregunta 8
+        Una página web presenta errores al momento de recibir los datos 
+        que los usuarios ingresan. 
+        ¿Cuál módulo del patrón MVC presenta el problema?
+
+            Modelo
+            Vista
+            ƒ Controlador
+    Pregunta 9
+        Al entrar a una sección de un sitio web se muestra un mensaje de error 
+        donde se comunica al usuario que la página NO está disponible. 
+        ¿Cuál de los siguientes procesos está fallando?
+
+            El cliente está accediendo de una manera errónea.
+            El cliente no establece conexión con el servidor
+            ƒ El archivo que se requiere no está en el servidor
+    Pregunta 10
+        En uno de los desarrollos realizados, 
+        el cliente NO está satisfecho con el diseño y los colores de la página. 
+        ¿Cuál módulo del patrón MVC debe ser modificado?
+
+            Modelo
+            Controlador
+            ƒ Vista
+    ---
+    Pregunta 1: 
+        Esta pregunta se enfoca en identificar cuál de las partes del patrón MVC (Modelo-Vista-Controlador) 
+        es responsable de la lógica de negocio y la manipulación de los datos.
+    Pregunta 2: 
+        Aquí se te pide ordenar los pasos que siguen las diferentes 
+        partes del patrón MVC para procesar una solicitud.
+    Pregunta 3: Esta pregunta busca evaluar tu comprensión de las funciones básicas que se implementan en una aplicación web.
+
+    Pregunta 4: ¿Dónde prima más la programación que el diseño web?
+        Respuesta: Un sitio web que utiliza efectos para llamar la atención de los usuarios.
+        Explicación: Los efectos visuales y las animaciones suelen requerir una programación más compleja para su implementación, ya que involucran la manipulación del DOM (Document Object Model) y, en muchos casos, el uso de librerías o frameworks JavaScript.
+    Pregunta 5: ¿Es adecuado un sitio web estático para registrar entradas y salidas?
+        Respuesta: No, el proyecto requiere de un modelo de datos y las páginas estáticas no lo cumplen.
+        Explicación: Un sitio web estático no permite la modificación dinámica de los datos. Para registrar entradas y salidas, se necesita un sistema que permita almacenar y actualizar esta información en una base de datos, lo cual es propio de un sitio web dinámico.
+    Pregunta 6: ¿Qué tipo de página web es necesaria para publicar eventos y noticias de forma continua?
+        Respuesta: Una página web dinámica que permita la actualización del contenido.
+        Explicación: Las páginas web dinámicas son ideales para contenido que se actualiza con frecuencia. Permiten agregar, modificar y eliminar información sin tener que modificar el código de cada página individualmente.
+    Pregunta 7: ¿Cuáles son dos funciones clave en el diseño web?
+        Respuesta: Funcionalidad del sitio y usabilidad.
+        Explicación:
+
+    Funcionalidad: 
+        Se refiere a las acciones que un usuario puede realizar en el sitio web (por ejemplo, registrarse, realizar compras, buscar información).
+    Usabilidad: 
+        Se enfoca en la facilidad con la que un usuario puede navegar e interactuar con el sitio web.
+    Pregunta 8: 
+        ¿Qué módulo del MVC presenta problemas si hay errores al recibir datos?
+        Respuesta: Controlador.
+        Explicación: El controlador es el encargado de recibir las solicitudes del usuario, procesarlas y enviarlas al modelo para su actualización. Si hay errores al recibir los datos, es muy probable que el problema se encuentre en la lógica del controlador.
+    
+    Resumen de las respuestas:
+
+    Pregunta	Respuesta	Explicación
+    4	Sitio web con efectos	Requiere programación compleja para animaciones y efectos visuales.
+    5	No, se necesita un sitio dinámico	Para almacenar y actualizar datos de forma dinámica.
+    6	Página web dinámica	Permite actualizar contenido de forma continua.
+    7	Funcionalidad y usabilidad	Son aspectos fundamentales de cualquier sitio web.
+    8	Controlador	Es el encargado de recibir y procesar las solicitudes del usuario.
+
+    Pregunta 8:
+    ¿Cuál módulo del patrón MVC presenta el problema cuando una página web presenta errores al momento de recibir los datos que los usuarios ingresan?
+
+    Respuesta: Controlador.
+    Explicación: El controlador es el encargado de recibir las solicitudes del usuario, procesarlas y enviarlas al modelo para su actualización. Si hay errores al recibir los datos, lo más probable es que el problema se encuentre en la lógica del controlador, ya sea en la validación de los datos, en la interacción con el modelo o en la generación de la respuesta.
+    Pregunta 9:
+    Al entrar a una sección de un sitio web se muestra un mensaje de error donde se comunica al usuario que la página NO está disponible. ¿Cuál de los siguientes procesos está fallando?
+
+    Respuesta: El archivo que se requiere no está en el servidor.
+    Explicación: Si el usuario recibe un mensaje indicando que la página no está disponible, lo más probable es que el archivo HTML, CSS o JavaScript correspondiente a esa sección no se encuentre en el servidor o esté dañado. Esto puede deberse a un error en el despliegue, una eliminación accidental o un problema en el servidor.
+    Pregunta 10:
+    En uno de los desarrollos realizados, el cliente NO está satisfecho con el diseño y los colores de la página. ¿Cuál módulo del patrón MVC debe ser modificado?
+
+    Respuesta: Vista.
+    Explicación: La vista es la parte del patrón MVC que se encarga de la presentación de la información al usuario. Si el cliente no está satisfecho con el diseño y los colores, es necesario modificar la vista, que es donde se define la apariencia visual de la página. Esto implica cambiar los archivos HTML, CSS y posiblemente algunas plantillas.
+    Resumen de las respuestas:
+
+    Pregunta 8: El problema está en el Controlador, ya que es el encargado de procesar los datos enviados por el usuario.
+    Pregunta 9: El problema está en el servidor, específicamente en la falta del archivo necesario para mostrar la página.
+    Pregunta 10: El problema está en la Vista, ya que es la parte encargada de la presentación visual de la página.
+    ¿Te gustaría profundizar en alguno de estos 
+
+Área de trabajo.pdf
+    ÁREA DE TRABAJO
+        DESARROLLADOR DE BACK-END
+            Al ser desarrollador back-end, puedes trabajar con tus clientes desde casa, 
+            como freelance, o como empleado de una empresa.
+            Cualquiera que sea el caso, mantener el orden en el área de trabajo es fundamental para aumentar tu 
+            rendimiento y productividad. Para ello, sigue estos pasos:
+
+            Selecciona las cosas 
+            que utilices con frecuencia 
+            y retira lo que ocupes de 
+            manera ocasional.
+
+            Destina un espacio 
+            a cada uno de los 
+            objetos y mantenlos 
+            sólo en los lugares que
+            les corresponda. Recuerda 
+            “Un lugar para cada cosa 
+            y cada cosa en su lugar
+
+            Mantén limpia el área de 
+            trabajo, tu equipo 
+            de cómputo y las 
+            herramientas que utilices.
+
+            Inspecciona de 
+            manera periódica la 
+            organización y limpieza 
+            de tu espacio de trabajo, 
+            de esta manera puedes 
+            prevenir el desorden 
+            y suciedad, además 
+            de contar con un lugar 
+            óptimo para trabajar.
+
+            Si trabajas de manera independiente, asegúrate de que tu lugar 
+            de trabajo cumpla con las siguientes características:
+                
+                Verifica que sea un lugar 
+                ventilado y bien iluminado.
+
+                Mantén tu escritorio limpio y 
+                despejado; evita ocuparlo para 
+                comer, descansar o jugar.
+
+                Utiliza una agenda para establecer 
+                y recordar fechas de entrega y 
+                optimizar tus tiempos de trabajo.
+
+                • El ingreso es variable, por lo 
+                que necesitas llevar una buena 
+                administración de las finanzas. 
+
+                Actualiza tu CV de manera constante 
+                y presta atención a 
+                nuevos conocimientos, 
+                promoción de tu trabajo y 
+                obtención de nuevos clientes.
+
+                Utiliza recipientes, bandejas u 
+                organizadores para ordenar las 
+                herramientas de papelería necesarias
+
+Medidas de seguridad y salud laboral
+    Identifica los riesgos y accidentes en su ambiente laboral para prevenirlos 
+    aplicando las medidas de seguridad y salud laboral
+    Nivel 1 Lección 2 Video 1
+
+    Las medidas de seguridad y salud laboral son cruciales para 
+    prevenir riesgos y accidentes en el ambiente de trabajo. 
+    Para identificar y prevenir estos riesgos, 
+    se deben implementar las siguientes acciones:
+
+        Realizar una evaluación de riesgos: 
+            Identificar los posibles peligros y peligros en el lugar de trabajo, 
+            incluyendo 
+                condiciones ambientales, 
+                equipo y herramientas, 
+                y prácticas de trabajo.
+
+        Establecer procedimientos de seguridad: 
+            Desarrollar y comunicar procedimientos de seguridad 
+            y salud claros y precisos a todos los empleados, 
+            incluyendo la formación adecuada y el uso de equipo 
+            de protección personal.
+
+        Implementar controles de seguridad: 
+            Tomar medidas para eliminar o reducir los riesgos identificados, 
+            como la implementación de barreras físicas, 
+            la mejora de la iluminación y la ventilación, 
+            y la implementación de prácticas de trabajo seguras.
+
+        Monitorear y revisar las medidas de seguridad: 
+            Continuar evaluando y mejorando las medidas de seguridad 
+            y salud en el trabajo, y tomar medidas correctivas cuando sea necesario.
+
+        Fomentar la participación de los empleados: 
+            Involucrar a los empleados en 
+                la identificación 
+                y prevención de riesgos, 
+                y promover una cultura de seguridad y salud en el trabajo.
+
+    Al seguir estas medidas, se puede crear un ambiente de trabajo 
+        más seguro y saludable para todos los empleados.
+
+Ética profesional
+    Aplica 
+        valores y princios en su área de trabajo, 
+        con el fin de actuar con ética profesional
+
+        Ética profesional
+
+            Profesionalismo
+            Normas y obligaciones
+            Regulan nuestra conducta
+        Beneficios
+
+            Imparcialidad: 
+            Toma de decisión: 
+            Pertenencia e identidad: 
+            Evita conflicto:
+        Valores éticos
+            Honestidad
+            Lealtad
+            Respeto
+            Confianza
+            Congruencia
+        Principios
+            Honestidad y transparencia
+            Bien común
+            Confidencialidad
+            Originalidad
+            Puntualidad
+
+Espacio de trabajo.pdf
+    Identifica los objetos que se encuentran en tu lugar de trabajo y 
+    completa la siguiente tabla. De acuerdo con la tabla, indica si hay 
+    objetos innecesarios en tu lugar de trabajo.
+    Situación laboral: Empleado de oficina que trabaja en una computadora durante la mayor parte del día.
+
+        Número	      Objeto	            Frecuencia de uso	                     ¿Es un objeto necesario? ¿Por qué?
+        1	    Computadora	                Diario	                        Sí, es esencial para realizar las tareas diarias.
+        2	    Teléfono	                Varias veces al día	Sí,         necesario para comunicarse con compañeros y clientes.
+        3	    Tazas y jarra de café	    Varias veces al día	Depende.    Si hay una cafetera compartida, podría ser innecesario tener tazas personales. Si no hay acceso a una cafetera, sería necesario.
+        4	    Agenda personal	            Diario o semanal	            Depende de cómo se organicen las tareas. Si se utiliza un calendario digital, podría ser innecesario.
+        5	    Plantas ornamentales	    Diario (visualización)	        No es estrictamente necesario para el trabajo, pero puede mejorar el ambiente y reducir el estrés.
+    
+    II. Inspecciona tu lugar de trabajo e indica en la siguiente tabla la
+        frecuencia con que se cumplen las medidas de seguridad. Además, 
+        propón soluciones que garanticen el cumplimiento de las medidas que 
+        se aplican con menor frecuencia.
+        
+        Medida de Seguridad	                                    Muy frecuente	En algunas ocasiones	Nunca se cumple
+        El espacio de trabajo se encuentra limpio y ordenado		X	
+        Los horarios de comida establecidos son respetados	        X		
+        El espacio de trabajo cuenta con ventilación e iluminación adecuada			    X
+        Los cables de los equipos no presentan daños y están conectados a fuentes de poder con batería de respaldo	X		
+        Tu postura al trabajar es la correcta		                X	
+        El monitor tiene un nivel de brillo muy bajo		                        X	
+        Utilizas de manera correcta el mouse y el teclado			X
+    
+    III. Completa la siguiente tabla escribiendo cinco situaciones en donde 
+        apliques los siguientes valores y principios
+
+        Valor o Principio	Ejemplos de Situaciones																								
+        a. Honestidad	    - Informar al cliente sobre un defecto en el producto que adquirió. 
+                            No exagerar las cualidades de un servicio para realizar una venta. <br>- 
+                            Reconocer un error cometido en el trabajo 
+                            y tomar las medidas necesarias para corregirlo. 
+                            Declarar todos los ingresos en la declaración de impuestos. 
+                            No copiar el trabajo de otra persona y presentarlo como propio.	
+        b. Respeto	        - Escuchar atentamente las opiniones de los compañeros de trabajo, 
+                            aunque sean diferentes a las propias. 
+                            - Tratar a todos los clientes con cortesía y amabilidad, 
+                                independientemente de su origen o condición social.
+                            - Evitar hacer comentarios discriminatorios o ofensivos sobre las personas. 
+                            - Respetar los horarios y turnos de trabajo establecidos. 
+                            - Cuidar las herramientas y equipos de trabajo.		
+        c. Congruencia	    - Practicar lo que se predica, es decir, actuar de acuerdo a 
+                                los valores que se promueven. 
+                            - Mantener una comunicación abierta y honesta con los demás. 
+                            - Ser coherente entre lo que se piensa, se dice y se hace. 
+                            - Cumplir con los compromisos adquiridos. 
+                            - Demostrar integridad en todas las acciones.	
+        a. Confianza	    - Cumplir con las promesas hechas a los demás. 
+                            - Ser confiable en el desempeño de las tareas asignadas. 
+                            - Guardar los secretos que se te confían. 
+                            - Ser transparente en las relaciones interpersonales. 
+                            - Demostrar lealtad hacia la empresa y los compañeros de trabajo.	
+        a. Confidencialidad	- No revelar información confidencial de la empresa a terceros. 
+                            - Proteger los datos personales de los clientes. 
+                            - Mantener en secreto las conversaciones privadas. 
+                            - No divulgar información privilegiada. 
+                            - Respetar la privacidad de los demás.	
+        a. Originalidad	    - Desarrollar ideas innovadoras para mejorar los procesos 
+                                y productos. 
+                            - Crear soluciones originales a los problemas. 
+                            - Fomentar la creatividad en el trabajo. 
+                            - Buscar nuevas formas de hacer las cosas. 
+                            - No copiar el trabajo de otros.
+
+
+    V. Utiliza el siguiente formato para organizar tu tiempo y mejorar tu 
+        productividad.  Escribe  las  actividades  que  tengas  programadas  en  la 
+        semana y selecciona los días que dedicarás a cada actividad
+
+        Actividad	                                        Lunes	Martes	Miércoles	Jueves	Viernes
+        1. Revisar correos y agenda	                        X	    X	    X	        X	    X
+        2. Atender llamadas de clientes	                    X	    X	    X	        X	    X
+        3. Realizar diagnóstico remoto de impresoras	    X	    X	    X	        X	    X
+        4. Visitar cliente 1: Reparación impresora láser			X		
+        5. Visitar cliente 2: Instalación de nueva impresora				X	
+        6. Capacitación técnica (online)					                                    X
+        7. Inventario de suministros		                                            X			
+        8. Elaborar reportes técnicos			                                    X		
+        9. Reunión con equipo de soporte				        X	
+        10. Actualizar base de datos de clientes	        X	
+
+Lenguajes y paradigmas de programación
+    Comprende la importancia que tienen en el desarrollo web los lenguajes y paradigmas de programación.
+        Nivel 1 Lección 2 Video 3
+        Lenguajes de Programación: El Idioma de las Máquinas
+
+            Imagina que quieres darle instrucciones a una computadora 
+            para que realice una tarea. 
+            Para ello, necesitas hablar su idioma, 
+            y ese idioma son los lenguajes de programación. 
+            Estos lenguajes son conjuntos de reglas y símbolos 
+            que permiten a los programadores escribir instrucciones 
+            que la computadora puede entender y ejecutar.
+
+        Paradigmas de Programación: 
+            Diferentes Formas de Pensar
+
+                Al igual que existen diferentes idiomas humanos, 
+                también existen diferentes formas de pensar 
+                y estructurar el código en programación. 
+                
+                Estos diferentes enfoques se conocen como paradigmas de programación. 
+                Cada paradigma ofrece una perspectiva única sobre cómo resolver 
+                problemas y organizar el código.
+
+        Principales Paradigmas de Programación:
+
+            Imperativo: 
+                Se enfoca en describir una secuencia de pasos para lograr un resultado. 
+                Es como dar instrucciones paso a paso a un robot.
+                Ejemplos: C, Pascal
+            Orientado a objetos: 
+                Organiza el código en objetos que tienen propiedades (atributos) y comportamientos (métodos). 
+                Es como modelar el mundo real en términos de objetos.
+                Ejemplos: Java, C++
+            Funcional: 
+                Trata los cálculos como la evaluación de funciones matemáticas.
+                Evita modificar el estado de los datos y se enfoca en la composición de funciones.
+                Ejemplos: Haskell, Lisp
+            Lógico: 
+                Se basa en la lógica matemática para resolver problemas. 
+                Se describe lo que se quiere lograr en lugar de cómo lograrlo.
+                Ejemplos: Prolog
+        
+        ¿Por qué son importantes los paradigmas de programación?
+
+            Organización del código: 
+                Facilitan la estructuración y comprensión del código.
+            Reusabilidad: 
+                Permiten crear componentes de software reutilizables.
+            Abstracción: 
+                Ayudan a ocultar la complejidad y enfocarse en los aspectos más importantes.
+            Solución de problemas: 
+                Cada paradigma ofrece diferentes herramientas para 
+                resolver problemas de manera eficiente.
+            En resumen, 
+                los lenguajes de programación son las herramientas 
+                que utilizamos para comunicarnos con las computadoras, 
+                y los paradigmas de programación son las diferentes formas 
+                en que podemos estructurar ese código. 
+                La elección del lenguaje y el paradigma adecuado dependerá 
+                del tipo de problema que se quiera resolver 
+                y de las características del proyecto.
+            
+        La programación estructurada y sus tres estructuras de control básicas
+                los tres pilares fundamentales de la programación estructurada: 
+                    secuencia, 
+                    selección 
+                    e iteración. 
+            
+            Estos tres elementos son la base para construir cualquier algoritmo, 
+            sin importar cuán complejo sea.
+
+            Secuencia: 
+                Representa la ejecución lineal de instrucciones,
+                una tras otra, en el orden en que aparecen en el código. 
+                Es como seguir una receta paso a paso.
+            Selección: 
+                Permite tomar decisiones basadas en condiciones. 
+                o un bifurcación en un camino, donde se elige 
+                una ruta u otra dependiendo de si se cumple 
+                o no una determinada condición.
+            Iteración: 
+                Permite repetir un bloque de código un número 
+                determinado de veces o mientras se cumpla una condición. 
+                Es como dar vueltas en una ronda, 
+                repitiendo las mismas acciones hasta alcanzar un objetivo.
+
+            ¿Por qué son importantes estas estructuras?
+
+                Claridad y legibilidad: 
+                    Al descomponer los problemas en estas estructuras básicas, 
+                    el código se vuelve más fácil de entender y mantener.
+                Modularidad: 
+                    Permiten crear bloques de código reutilizables, 
+                    facilitando la construcción de programas más grandes y complejos.
+                Eficiencia: 
+                    Al optimizar el flujo de control, se pueden mejorar el rendimiento 
+                    y la eficiencia de los programas.
+            En resumen, 
+                la programación estructurada proporciona un marco sólido para 
+                    diseñar y desarrollar software. 
+                Al comprender y aplicar estas tres estructuras básicas, 
+                los programadores pueden crear algoritmos 
+                    claros, 
+                    eficientes 
+                    y fáciles de mantener.
+
+        ¡Claro! Aquí tienes una explicación breve y concisa sobre el paradigma de programación orientada a objetos (POO):
+
+        Programación Orientada a Objetos (POO)
+            La POO es un modelo de programación que se basa en el concepto de "objetos" 
+            como unidades fundamentales de software. 
+            Estos objetos representan entidades 
+            del mundo real, como personas, coches, cuentas bancarias, etc.
+
+            Características principales de la POO:
+
+            Objetos: 
+                Son instancias de clases, es decir, 
+                representaciones de entidades con sus propias características 
+                (atributos) y comportamientos (métodos).
+            Clases: 
+                Son como moldes que definen 
+                las propiedades y métodos que compartirán 
+                todos los objetos de ese tipo.
+            Herencia: 
+                Permite crear nuevas clases a partir de clases existentes, 
+                heredando sus características y añadiendo nuevas. 
+                Esto promueve la reutilización de código.
+            Encapsulación: 
+                Oculta la implementación interna de un objeto, 
+                exponiendo solo una interfaz para interactuar con él. 
+                Esto aumenta la seguridad y la mantenibilidad del código.
+            Polimorfismo: 
+                Permite que objetos de diferentes clases respondan de manera 
+                diferente al mismo mensaje. 
+                Esto hace el código más flexible y adaptable.
+
+            Ventajas de la POO:
+
+                Reutilización de código: 
+                    Gracias a la herencia y la encapsulación, se puede reutilizar código en diferentes partes del programa.
+                Modularidad: 
+                    El código se organiza en módulos independientes (objetos), lo que facilita su comprensión y mantenimiento.
+                Flexibilidad: 
+                    La POO permite crear sistemas más flexibles y adaptables a los cambios.
+                Simulación del mundo real: 
+                    Al modelar el mundo real en términos de objetos, 
+                    la POO facilita la comprensión de los problemas 
+                    y la creación de soluciones más intuitivas.
+
+            En resumen, 
+                la POO es una forma de programar que se acerca más 
+                a la forma en que pensamos sobre el mundo real. 
+                Al modelar problemas en términos de objetos, 
+                el código se vuelve más organizado, reutilizable y fácil de mantener.
+
+                Ejemplos de lenguajes orientados a objetos: Java, C++, Python, C#
+                
+                POO ajustar el lenguaje al problema en vez de ajustar el problema al lenguaje
+
+ELEMENTOS DE LA PROGRAMACIÓN ESTRUCTURADA
+    Elementos de la programación estructurada.pdf 
+
+    Programación Estructurada
+        los tres pilares fundamentales de la programación estructurada: 
+            secuencia, 
+            selección 
+            e iteración. 
+        
+        Estos tres elementos son la base para construir cualquier algoritmo, 
+        sin importar cuán complejo sea.
+
+        Secuencia: 
+            Representa la ejecución lineal de instrucciones, 
+            una tras otra, en el orden en que aparecen en el código. 
+            Es como seguir una receta paso a paso.
+        Selección: 
+            Permite tomar decisiones basadas en condiciones. 
+            Es como un bifurcación en un camino, 
+            donde se elige una ruta u otra dependiendo de si 
+            se cumple o no una determinada condición.
+        Iteración: 
+            Permite repetir un bloque de código un número determinado 
+            de veces o mientras se cumpla una condición. 
+            Es como dar vueltas en una ronda, repitiendo las mismas 
+            acciones hasta alcanzar un objetivo.
+        ¿Por qué son importantes estas estructuras?
+
+            Claridad y legibilidad: 
+                Al descomponer los problemas en estas estructuras básicas, 
+                el código se vuelve más fácil de entender y mantener.
+            Modularidad: 
+                Permiten crear bloques de código reutilizables,
+                facilitando la construcción de programas más grandes y complejos.
+            Eficiencia: 
+                Al optimizar el flujo de control, 
+                se pueden mejorar el rendimiento 
+                y la eficiencia de los programas.
+            En resumen, 
+                la programación estructurada proporciona un marco sólido 
+                para diseñar y desarrollar software. 
+                Al comprender y aplicar estas tres estructuras básicas, 
+                los programadores pueden crear algoritmos 
+                    claros, eficientes y fáciles de mantener.
+
+        Analogías para entender mejor:
+
+            Secuencia: Es como seguir una receta de cocina, donde cada paso se ejecuta en un orden específico.
+            Selección: Es como tomar una decisión en un cruce: si el semáforo está en verde, avanzas; si está en rojo, te detienes.
+            Iteración: Es como lavar los platos: repites el proceso de enjuagar y secar hasta que todos los platos estén limpios.
+            Ejemplo práctico:
+                Imagina que quieres escribir un programa para calcular el factorial de un número. 
+                Podrías utilizar estas estructuras de la siguiente manera:
+
+                Secuencia: Pedir al usuario que ingrese un número, inicializar una variable para almacenar el resultado y establecer un contador.
+                Selección: Verificar si el número ingresado es menor o igual a 1. Si es así, el factorial es 1.
+                Iteración: Si el número es mayor que 1, utilizar un bucle para multiplicar el número por todos los números enteros positivos menores que él.
+            
+        En conclusión, estas tres estructuras básicas son la columna vertebral 
+            de la programación estructurada y permiten crear programas complejos 
+            a partir de componentes más simples.
+    
+    A partir del diagrama de flujo que has proporcionado, podemos crear un pseudocódigo que represente el algoritmo de búsqueda secuencial.
+
+        Pseudocódigo:
+            INICIO
+                i ← 1
+                ENCONTRADO ← FALSO
+                MIENTRAS (i <= N Y ENCONTRADO == FALSO) HACER
+                    SI (X[i] == T) ENTONCES
+                        ENCONTRADO ← VERDADERO
+                    FIN SI
+                    i ← i + 1
+                FIN MIENTRAS
+                SI (ENCONTRADO) ENTONCES
+                    IMPRIMIR "T se encuentra en la posición i"
+                SI NO
+                    IMPRIMIR "T no se encuentra"
+                FIN SI
+            FIN
+
+        Explicación del pseudocódigo:
+
+            Inicialización: 
+                Se inicializan las variables i (contador) y ENCONTRADO (bandera para indicar si se encontró el elemento).
+            Bucle: 
+                Se inicia un bucle MIENTRAS que se ejecutará mientras 
+                el contador i sea menor o igual 
+                al tamaño del arreglo N 
+                y el elemento no haya sido encontrado.
+            Comparación: 
+                Dentro del bucle, se compara el elemento actual del arreglo X[i] 
+                con el valor buscado T.
+            Actualización de la bandera: 
+                Si se encuentra una coincidencia, se cambia el valor de ENCONTRADO 
+                a VERDADERO y se sale del bucle.
+            Incremento del contador: 
+                Si no se encuentra una coincidencia, 
+                se incrementa el contador i 
+                para pasar al siguiente elemento del arreglo.
+            Resultado: 
+                Después del bucle, se imprime un mensaje indicando 
+                si el elemento fue encontrado o no, junto con 
+                la posición en caso de que se haya encontrado.
+
+        ¿Qué hace este algoritmo?
+
+            Este algoritmo busca un elemento específico (T) 
+            dentro de un arreglo (X) de tamaño N. 
+            Recorre el arreglo elemento por elemento 
+            hasta encontrar el valor buscado 
+            o hasta llegar al final del arreglo. 
+            Si encuentra el valor, 
+            se detiene la búsqueda y se indica 
+            la posición en la que se encontró. 
+            Si no lo encuentra, 
+            se indica que el valor no está en el arreglo.
+
+        Este pseudocódigo es una representación general del algoritmo 
+            y puede ser adaptado a diferentes lenguajes de programación.
+
+        Ejemplo en Python:
+
+            Python
+                def busqueda_secuencial(lista, elemento):
+                    """Busca un elemento en una lista de forma secuencial.
+
+                    Args:
+                        lista: La lista donde se realizará la búsqueda.
+                        elemento: El elemento a buscar.
+
+                    Returns:
+                        La posición del elemento si se encuentra, -1 en caso contrario.
+                    """
+
+                    for i in range(len(lista)):
+                        if lista[i] == elemento:
+                            return i
+                    return -1
+
+                # Ejemplo de uso:
+                mi_lista = [1, 3, 5, 7, 9]
+                elemento_a_buscar = 5
+                resultado = busqueda_secuencial(mi_lista, elemento_a_buscar)
+
+                if resultado != -1:
+                    print("El elemento se encuentra en la posición:", resultado)
+                else:
+                    print("El elemento no se encuentra en la lista.")   
+
+Programación web básica.pdf 
+    Elementos de la Programación Estructurada Identificados:
+
+        Inicio: 
+            Aunque no se muestra explícitamente en la imagen, 
+            se asume que existe un punto de inicio antes de la asignación 
+            de valores a las variables x e y. 
+            Este es el punto donde comienza la ejecución del algoritmo.
+        Asignación: 
+            Se observa la asignación de valores a las variables x e y. 
+            Esta es una operación básica en la programación 
+            y forma parte de la secuencia de instrucciones.
+        Comparación: 
+            Se utilizan comparaciones para determinar 
+            si un valor es mayor, menor o igual que otro. E
+            n el diagrama, se comparan los valores de x e y. 
+            Esta es una estructura de control de selección.
+        Selección: 
+            Se emplean estructuras de decisión (if-else) 
+            para elegir entre diferentes caminos de ejecución 
+            según el resultado de una comparación. 
+            En este caso, se selecciona qué operación realizar 
+            (restar x a y o viceversa) 
+            en función de si x es mayor o menor que y.
+        Secuencia: 
+            Las instrucciones se ejecutan de forma secuencial, 
+            una tras otra. Por ejemplo, 
+            después de la comparación, 
+            se realiza la operación correspondiente 
+            y luego se imprime el resultado.
+
+        Interpretación del Diagrama de Flujo:
+
+            El diagrama de flujo representa un algoritmo sencillo que realiza el siguiente proceso:
+
+                Inicialización: Se asignan valores a las variables x e y.
+                Comparación: Se compara si x es mayor que y.
+                Selección:
+                    Si x es mayor que y, se resta y de x y se asigna el resultado a x.
+                    Si y es mayor o igual que x, se resta x de y y se asigna el resultado a y.
+                Impresión: Se imprime el valor final de x.
+        
+        En resumen, 
+            el diagrama de flujo muestra cómo se utilizan las estructuras básicas 
+            de la programación estructurada 
+            (secuencia, selección y asignación) 
+                a   s   s
+            para resolver un problema simple de comparación y asignación de valores.
+    
+        Concepto	                    Definición
+        a. Objeto	                        Se utiliza para representar situaciones de la vida real.
+        b. Paradigma de programación	    Estilo, reglas e instrucciones que se utilizan en el desarrollo de un programa.
+        c. Programación Estructurada	    Paradigma de programación que está basado en el uso de tres estructuras.
+        d. Programación Orientada a Objetos	Paradigma de programación que basa su funcionamiento en ajustar el lenguaje al problema, 
+                                            en vez de ajustar el problema al lenguaje.
+
+    Completa las siguientes oraciones con las frases que se encuentran
+        dentro del siguiente recuadro
+        A. En un programa se utiliza la estructura de control iterativa para realizar la misma serie de instrucciones varias veces.
+            La estructura iterativa (como los bucles) permite repetir un bloque de código un número determinado de veces o mientras se cumpla una condición.
+        B. El diagrama de flujo utiliza las tres estructuras de control para modelar el funcionamiento de un programa.
+            El diagrama de flujo es una representación gráfica de un algoritmo y utiliza las estructuras de 
+                secuencia, 
+                selección e 
+                iteración para mostrar el flujo de control de un programa.
+        C. La estructura de selección se utiliza para ejecutar una acción del programa, dependiendo de si se cumple o no con una condición.
+            La estructura de selección (como el if-else) permite tomar decisiones en función del resultado de una condición.
+        D. Los programas que se desarrollan siguiendo el paradigma de programación estructurada se ejecutan de manera secuencial.   
+            La programación estructurada se basa en la ejecución secuencial de instrucciones, aunque también utiliza las estructuras de selección e iteración para controlar el flujo del programa.
+        En resumen:
+            Secuencia: Ejecución de instrucciones en orden.
+            Selección: Toma de decisiones basadas en condiciones.
+            Iteración: Repetición de un bloque de código.
+            Diagrama de flujo: Representación gráfica de un algoritmo.
+
+            Secuencia: Se inicializan las variables y se establece un contador.
+            Iteración: Se utiliza un bucle para multiplicar el número por todos los números enteros positivos menores que él.
+            Selección: Se verifica si el número ingresado es menor o igual a 1 para calcular el factorial de 0 o 1.
+
+            S S A I 
+            SECUENCIA SELECCION ASIGNACION ITERAACION
+
+Proceso de trabajo
+    Conoce las tareas que deben realizar los desarrolladores back-end como parte de su proceso de trabajo
+    AKI VAMOS 
+    Nivel 2
+    Lección 1
+    Video 1
+
+    PAGINAS QUE INDICAN INTERACCION CON UNA BD 
+    COMPRA EN LINEA 
+    registros en linea
+    PAGINAS DE COMPRAS EN LINEA
+    PAGINAS DE REGISTROS EN LINEA
+    PAGINAS DE REGISTRO DE USUARIO
+        CLIENTE REGUIERE SITIO DINAMICO 
+        y no uno estatico 
+        CONVERTIR REQUERIMIENTOS DEL CLIENTE EN OBJETIVOS DEDESSARROLLO
+        DEFINIR DATOS DE ENTRADA 
+        ELABORARR ALGORITMOM PARA EL PROCESAMIENTO DE LOS DATOS DE ENTRADA 
+        DISEÑA IMPLEMENTA EL MODELO DE DATOS 
+
+DEFINICIÓN DE REQUERIMIENTOS
+    Definición de requerimientos.pdf
+        Antes de comenzar a desarrollar tus aplicaciones, 
+        debes comprender las necesidades y expectativas del cliente, 
+        así como identificar 
+            funcionalidades, 
+            atributos y 
+            capacidades con las que deben cumplir dichas aplicaciones.
+
+        Los requerimientos delimitan 
+            los elementos 
+            y las funciones necesarias 
+            para el desarrollo de un proyecto 
+            y debes definirlos y documentarlos, 
+            antes de comenzar el análisis 
+            y diseño de la aplicación.
+            
+             Para ello, sigue estos pasos:
+
+        Obtén los requerimientos. 
+            Verifica que estén detallados. 
+            Obtenlos directamente de la persona encargada del proyecto.
+        Analiza su desarrollo. 
+            Comprueba la coherencia de los requerimientos.
+        Verifica que sean correctos. 
+            Corrobora que los requerimientos especificados sean los que se solicitaron.
+            Una vez obtenidos los requerimientos, puedes clasificarlos en dos grupos:
+
+                Funcionales: 
+                    especifican las tareas que la aplicación debe realizar.
+                No funcionales: 
+                    definen cómo deben funcionar ciertas características de la aplicación, 
+                    como la facilidad de uso, 
+                    calidad o 
+                    rendimiento.
+        Por último, comprueba que todos los requerimientos cumplan con las siguientes características:
+            Actuales: 
+                Deben de estar siempre presentes y no volverse obsoletos, 
+                conforme avance el desarrollo del sistema.
+            Tener cohesión: 
+                Debe estar dirigido a una única cosa.
+            Completo: 
+                Debe declararse en un único lugar.
+            Consistente: 
+                No debe contradecir otro requerimiento.
+            Necesario: 
+                Debe cumplir con la necesidad declarada.
+            Factible: 
+                Debe poder ser implementado.
+            No ambiguo: 
+                Debe estar declarado de manera concisa.
+            Demostrable: 
+                Debe poder ser comprobado por cualquier 
+                método de análisis, demostración, prueba o inspección.
+
+Alcance del proyecto
+    Aplica los pasos que se utilizan para definir el alcance del proyecto.
+    definir 
+        caracteristicas y 
+        funciones que el sitio web debe cumplir 
+    con el cliente 
+        capacidad operacional del sitio
+        y plasmarlo en un un doc (especificacion de los requeriientos)
+        revisa con el cliente estas especificaciones
+    elabora plan de trabajo / definir actividades 
+    diseña inventario de entregables / establece fechas de presentacion 
+    define criterios de aceptacion para evaluar 
+        si el proyecto cumple con las espectativas acordadas 
+        delimitara el compromiso con el cliente
+        el costo 
+        la calidad 
+        y el tiempo de trabajo 
+    (es comun que cliente quiera implementar fx nuevas)
+        se debe volver replantear 
+            el alcance de la aplicacion 
+            el tiempo de desarrollo 
+            caracteristicas funcionales 
+            y su costo
+
+Herramientas para el desarrollo de back-end
+    HERRAMIENTAS PARA EL DESARROLLO DE BACK-END
+        Para programar el back-end de un sitio web,
+        es necesario utilizar herramientas que te ayuden a 
+            escribir el código fuente, 
+            o bien ejecutar los programas que ya hayas desarrollado.
+
+        Editores de texto.
+            Son programas que sirven para escribir el código 
+            fuente del sitio web. Hay algunos de gran potencial 
+            que realizan algunas funciones, 
+                como resaltar las palabras claves del lenguaje, 
+                indentar el código y 
+                marcar el inicio y 
+                fin de un bloque de código.
+        El servidor
+            Es la parte en donde se ejecutan los programas 
+            que desarrolles y está compuesto de:
+
+            Servidor Web:
+                su función es recibir y responder a las peticiones 
+                que los clientes realicen mediante una página web. 
+                Es el encargado de realizar la conexión 
+                entre el cliente y el servidor.
+
+            Sistema gestor de bases de datos:
+                gestiona y almacena la información extraída en una base de datos. 
+                Proporciona los medios necesarios para realizar consultas 
+                y modificaciones a los registros que se encuentran en la base.
+
+            Intérprete:
+                analiza y ejecuta las instrucciones definidas 
+                en un lenguaje de programación. 
+                En el caso de los servidores web, 
+                son intérpretes de PHP, Perl y Phyton.
+
+            Existen programas que incluyen todos los componentes 
+            de un servidor web configurados y listos para su ejecución. 
+            Toma en cuenta el sistema operativo de tu computadora 
+            y elige el servidor que mejor te convenga.
+
+Instalación del servidor local
+    Sigue los pasos planteados en los manuales de configuración de los servidores para realizar 
+    la instalación de un servidor local.
+
+    instalacion de servidor xamp 
+        activa con start
+            servidor web 
+            gestor de base de datos
+    verificacion 
+        //verificando gestor
+            en navegador 
+            http://localhost:8080/phpmyadmin 
+        //verificando werv web 
+            editar info.php 
+                <?php
+                    // http://localhost:8000/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/BACK-END-capacitate/ejercicios/info.php
+                    phpinfo();
+                ?>
+Proceso y herramientas de trabajo
+    Proceso y herramientas de trabajo.pdf
+
+    I. Clasifica en “Funcionales” y “No funcionales” los siguientes
+        requerimientos:
+
+        ƒ1. Sólo el administrador podrá dar de alta nuevos usuarios
+        ƒ2. Debe contar con un módulo para modificar los datos almacenados
+        3. El porcentaje de los usuarios que cometan errores debe ser menor al 20%
+        ƒ4. La página debe mostrar mensajes informativos de error o confirmación
+        5. Las interfaces gráficas de la página deben ser intuitivas
+        ƒ6. El usuario puede buscar información en la base de datos
+        ƒ7. El sitio debe guardar información específica de los usuarios
+        ƒ8. La página verifica las respuestas de un test
+        9. El tiempo de aprendizaje del sistema debe ser menor a 10 horas
+        ƒ10. La base de datos debe almacenar el nombre y edad de los usuarios
+
+        Funcionales:
+            Sólo el administrador podrá dar de alta nuevos usuarios
+            Debe contar con un módulo para modificar los datos almacenados
+            La página debe mostrar mensajes informativos de error o confirmación
+            El usuario puede buscar información en la base de datos
+            El sitio debe guardar información específica de los usuarios
+            La página verifica las respuestas de un test
+            La base de datos debe almacenar el nombre y edad de los usuarios
+        No funcionales:
+            3. El porcentaje de los usuarios que cometan errores debe ser menor al 20%
+            5. Las interfaces gráficas de la página deben ser intuitivas
+            9. El tiempo de aprendizaje del sistema debe ser menor a 10 horas
+
+    Lee el siguiente ejemplo de la petición de un cliente.
+        “Necesito un sitio web que me ayude a promocionar mi tienda de productos, 
+        y que a la vez pueda realizar ventas a través de un carrito de compras en línea.
+         El sitio debe ser sencillo de utilizar y seguro en cuanto a las transacciones de
+        pago. 
+        Además, es necesario implementar un módulo para administrar todo el
+        sitio y actualizar la información de los productos que se encuentran disponibles.
+        Es necesario almacenar el código de barras, nombre, existencias y tipo del
+        producto. 
+        El tiempo de desarrollo es de 30 días hábiles, y también es posible
+        contratar un plan de mantenimiento con el desarrollador del sitio”
+
+            a. Identifica los requerimientos funcionales y no funcionales del sitio. 
+
+            Funcionales:
+
+                Promocionar la tienda de productos en el sitio web.
+                Realizar ventas a través de un carrito de compras en línea.
+                Administrar el sitio y actualizar la información de los productos disponibles.
+                Almacenar el código de barras, nombre, existencias y tipo del producto.
+            No funcionales:
+                El sitio debe ser sencillo de utilizar (usabilidad).
+                Seguridad en las transacciones de pago.
+                Tiempo de desarrollo de 30 días hábiles.
+                Posibilidad de contratar un plan de mantenimiento con el desarrollador del sitio.
+            
+            Los requerimientos no funcionales son aquellos que no están relacionados directamente con las funciones específicas que el sistema debe realizar, sino con características de calidad o restricciones que el sistema debe cumplir. En este caso:
+            "El sitio debe ser sencillo de utilizar (usabilidad)": 
+            Esto se refiere a la facilidad de uso del sitio web, 
+            lo cual es una característica de calidad y no una función específica.
+
+            "Seguridad en las transacciones de pago": 
+            La seguridad es una restricción que el sistema debe cumplir, 
+            pero no es una función en sí misma.
+
+            "Tiempo de desarrollo de 30 días hábiles": 
+            Esto es una restricción de tiempo para el desarrollo del proyecto, 
+            no una función del sistema.
+
+            "Posibilidad de contratar un plan de mantenimiento con el desarrollador del sitio": 
+            Esto es un servicio adicional que se ofrece, 
+            pero no es una función específica del sitio web en sí.
+
+    b. Plan de trabajo:
+
+            Actividad                                   | Responsable                       | Tiempo Invertido | Lugar de trabajo       | Producto Esperado
+        --- | --- | --- | --- | ---
+        1. Diseño de la interfaz de usuario             | Equipo de diseño                  | 5 días            | Oficina de diseño     | Mockups y prototipos de la interfaz
+        2. Desarrollo del carrito de compras            | Equipo de desarrollo              | 10 días           | Oficina de desarrollo | Carrito de compras funcional
+        3. Implementación del módulo de administración  | Equipo de desarrollo              | 8 días            | Oficina de desarrollo | Módulo de administración funcional
+        4. Pruebas de seguridad y usabilidad            | Equipo de pruebas                 | 5 días            | Oficina de pruebas    | Informe de pruebas
+        5. Despliegue y entrega del sitio web           | Equipo de desarrollo y cliente    | 2 días            | Oficina del cliente   | Sitio web en funcionamiento
+
+    c. Calendario de entregas:
+        SEMANA 1
+        1 2 3 4 5
+        Diseño de la interfaz de usuario
+
+        SEMANA 2
+        6 7 8 9 10
+        Diseño de la interfaz de usuario
+
+        SEMANA 3
+        11 12 13 14 15
+        Desarrollo del carrito de compras
+
+        SEMANA 4
+        16 17 18 19 20
+        Desarrollo del carrito de compras
+        Implementación del módulo de administración
+
+        SEMANA 5
+        21 22 23 24 25
+        Implementación del módulo de administración
+        Pruebas de seguridad y usabilidad
+
+        SEMANA 6
+        26 27 28 29 30
+        Pruebas de seguridad y usabilidad
+        Despliegue y entrega del sitio web
+    
+    d. Alcance del proyecto:
+
+        Características:
+            Diseño responsivo y fácil de usar para mejorar la experiencia del usuario.
+            Carrito de compras en línea seguro y funcional para facilitar las ventas.
+            Módulo de administración para gestionar productos y actualizar información.
+            Integración con pasarelas de pago seguras para proteger las transacciones.
+            Diseño adaptable a diferentes dispositivos (móvil, tablet, computadora).
+        Funciones:
+            Navegación intuitiva por las categorías y productos de la tienda.
+            Búsqueda de productos por nombre, código de barras o tipo.
+            Visualización de información detallada de cada producto (nombre, existencias, tipo, precio).
+            Agregar productos al carrito de compras y modificar cantidades.
+            Realizar el proceso de compra de forma segura, incluyendo la selección de métodos de pago y envío.
+            Registro y login de usuarios para un seguimiento de pedidos y una experiencia personalizada.
+            Administración de productos (altas, bajas, modificaciones) a través del módulo de administración.
+            Actualización de información general del sitio web (políticas de privacidad, términos y condiciones, información de contacto).
+    
+    III. Investiga 4 servidores web que contengan todos los componentes que se
+            requieren para el desarrollo Back-End de una aplicación.
+
+        Distribución	Servidor web	Intérprete	        Gestor de Bases de Datos	Sistema Operativo
+        LAMP            | Apache        | PHP               | MySQL | Linux
+        WAMP            | Apache        | PHP               | MySQL | Windows
+        XAMPP           | Apache        | PHP, Perl         | MySQL, MariaDB | Multiplataforma (Windows, Linux, macOS)
+        MEAN            | Node.js       | JavaScript (AngularJS, Express.js) | MongoDB | Multiplataforma (Windows, Linux, macOS)
+
+     aquí te proporciono cuatro servidores web alojados en Internet que contienen todos los componentes necesarios para el desarrollo Back-End de una aplicación:
+
+        Amazon Web Services (AWS)
+
+            Servidor web: Amazon EC2
+            Intérprete: Varias opciones (PHP, Python, Node.js, etc.)
+            Gestor de Bases de Datos: Amazon RDS (MySQL, PostgreSQL, etc.)
+            Sistema Operativo: Varias opciones (Linux, Windows)
+            Google Cloud Platform (GCP)
+
+            Servidor web: Google Compute Engine
+            Intérprete: Varias opciones (PHP, Python, Node.js, etc.)
+            Gestor de Bases de Datos: Google Cloud SQL (MySQL, PostgreSQL)
+            Sistema Operativo: Varias opciones (Linux, Windows)
+            Microsoft Azure
+
+            Servidor web: Azure Virtual Machines
+            Intérprete: Varias opciones (PHP, Python, Node.js, etc.)
+            Gestor de Bases de Datos: Azure SQL Database (SQL Server)
+            Sistema Operativo: Varias opciones (Linux, Windows)
+            DigitalOcean
+
+            Servidor web: Droplets
+            Intérprete: Varias opciones (PHP, Python, Node.js, etc.)
+            Gestor de Bases de Datos: Managed Databases (MySQL, PostgreSQL, Redis)
+            Sistema Operativo: Varias opciones (Linux)
+
+EXAMEN 
+    Pregunta 1
+        una vez instalado el servidor, ¿de qué manera puedes verificar su funcionamiento?
+
+        Revisando si se creó la carpeta en donde se almacena
+        ƒ Ingresando a la página de localhost desde el navegador
+        Verificando si se inicia el servidor desde el panel de control
+    Pregunta 2
+
+        Un cliente presenta la necesidad de implementar un sitio web, ¿qué es lo primero que debes hacer?
+
+        ƒ Verificar si puedes cumplir con los requerimientos establecidos por el cliente
+        nokƒ Delimitar el alcance y convertir los requerimientos en objetivos de desarrollo
+        Asegurar que el cliente necesita un sitio dinámico en vez de uno estático
+
+    mala Pregunta 3
+        Selecciona tres de las características con las que deben cumplir los requerimientos establecidos por el cliente.
+    nok
+        ƒ Funcionales
+        Demostrables
+        Actuales
+        ƒ Consistentes
+        ƒ Necesarios
+
+    Pregunta 4
+        Al realizar pruebas de funcionamiento de un sitio, se detecta que la conexión 
+        con las bases de datos NO se puede realizar ya que requiere de usuario y contraseña. 
+        El usuario administrador No recuerda sus credenciales, 
+        por lo que decide cambiarlas. 
+        ¿En cuál de los componentes se debe configurar un nuevo usuario y contraseña?
+
+        En el procesamiento de datos
+        ƒ En el sistema gestor de bases de datos
+        En la configuración del servidor web
+
+    Pregunta 5
+        Al entrar a la página principal del servidor, el navegador muestra un error. 
+        Elige dos posibles causas de esta falla.
+
+        ƒ Escribir mal la dirección de localhost
+        El equipo no tiene conexión a internet
+        ƒ El servidor no se encuentra activo
+        Instalación incorrecta del servidor
+
+    Pregunta 6
+
+        Una falla en el procesamiento de datos provoca que la información NO
+        se almacene de manera adecuada. 
+        ¿Cuál de las tareas del Back-End es la causante del problema?
+
+        nok ƒ La implementación de la base de datos
+        ƒ El diseño y desarrollo del algoritmo
+        La definición de los datos de entrada
+
+    Pregunta 7
+        ¿Dónde deben estar almacenados los archivos que componen el Back-End de una aplicación?
+
+        ƒ En la carpeta de ejecución del servidor
+        En la carpeta de instalación del servidor
+        En la carpeta de configuración del servidor
+
+    Pregunta 8
+        Encargado de gestionar toda la información almacenada 
+        en el modelo implementado para una aplicación web en específico:
+
+        nok ƒ Base de datos
+        Servidor web
+        Gestor de bases de datos
+    Pregunta 9
+        Se encarga de recibir y responder las peticiones que realicen a la página web:
+
+        Intérprete de lenguajes
+        Gestor de Bases de Datos
+        ƒ Servidor web
+
+    NOK Pregunta 10
+        Ordena los pasos que debes seguir para definir el alcance del proyecto
+    nok 
+        Revisar la especificación de los requerimientos
+        Definir criterios de aceptación para evaluar la funcionalidad
+        Elaborar un plan de trabajo para las actividades
+        Diseñar un inventario de entregables y definir fechas
+    Claro, aquí tienes el contenido sin modificaciones:
+
+    Pregunta 1
+        Un cliente presenta la necesidad de implementar un sitio web, ¿qué es lo primero que debes hacer?
+
+        NOK Verificar si puedes cumplir con los requerimientos establecidos por el cliente
+        NOK Delimitar el alcance y convertir los requerimientos en objetivos de desarrollo
+        Asegurar que el cliente necesita un sitio dinámico en vez de uno estático
+    Pregunta 2
+        Durante el desarrollo de un proyecto, el cliente requiere de la implementación de un nuevo módulo que NO fue plasmado en el alcance.
+        ¿De qué manera debes proceder ante esta situación?
+
+    Pregunta 3
+        Una falla en el procesamiento de datos provoca que la información NO se almacene de manera adecuada. 
+        ¿Cuál de las tareas del Back-end es la causante del problema?
+
+        La implementación de la base de datos
+        ƒ El diseño y desarrollo del algoritmo
+        La definición de los datos de entrada
+    Pregunta 4
+        De las siguientes opciones, selecciona dos en donde puede ser útil el desarrollo del Back-end:
+
+    Pregunta 4
+        De las siguientes opciones, selecciona dos en donde puede ser útil el desarrollo del Back-End.
+
+        □ Una clínica que desea mostrar información acerca de sus servicios
+        □ Una página que ofrece información general acerca de una empresa
+        ☑ Sitio de una tienda que desea realizar ventas por Internet
+        □ Una calculadora científica que funcione a través de internet
+
+    Pregunta 5
+        ¿Cuáles de los siguientes programas debes ejecutar para visualizar el funcionamiento del Back-end?
+
+        ƒ Navegador web
+        Servidor
+        Base de datos
+        IDE
+    Pregunta 6
+        Encargado de gestionar toda la información almacenada en el modelo implementado para una aplicación web en específico:
+
+        NOK Base de datos
+        NOK ƒ Servidor web
+        Gestor de bases de datos
+    NOK Pregunta 7
+        Ordena los pasos que debes seguir para definir el alcance del proyecto
+    NOK 
+        Establecer un inventario de entregables y definir fechas
+        Revisar la especificación de los requerimientos
+        Definir criterios de aceptación para evaluar la funcionalidad
+        Elaborar un plan de trabajo para las actividades
+    Pregunta 8
+        ¿En dónde deben estar almacenados los archivos que componen el Back-End de una aplicación?
+
+        En la carpeta de instalación del servidor
+        En la carpeta de configuración del servidor
+        ƒ En la carpeta de ejecución del servidor
+    Pregunta 9
+        Selecciona los tres elementos que conforman al servidor que se utiliza como entorno de ejecución en los proyectos de Back-End.
+    NOK 
+        ƒ Vista
+        Servidor web
+        Intérprete
+        Cliente
+        Gestor de bases de datos
+        ƒ Controlador
+        ƒ Modelo
+    Pregunta 10
+        En un sitio, los componentes del servidor NO pueden comunicarse entre ellos. Las páginas se muestran, pero el contenido dinámico NO se muestra en ninguna página. 
+        Selecciona dos opciones que muestren una situación que pueda ocasionar estos errores si se asegura el funcionamiento del servidor.
+    NOK
+        El intérprete no reconoce la sintaxis del programa
+        ƒ El intérprete no se encuentra activo
+        ƒ El servidor no está configurado para ejecutar el código
+        El navegador no ejecuta el contenido dinámico
+
+    --
+    Pregunta 1
+        Una página web NO muestra ninguna de las interacciones que se realizan en el Back-End. 
+        ¿Cuál de las siguientes opciones no funciona de la manera correcta?
+        NOK ƒ La conexión con el servidor
+            El gestor de bases de datos
+            El intérprete de lenguajes
+    Pregunta 2
+        ¿Dónde deben estar almacenados los archivos que componen el Back-End de una aplicación?
+
+        En la carpeta de instalación del servidor
+        En la carpeta de configuración del servidor
+        ƒ En la carpeta de ejecución del servidor
+    Pregunta 3
+        Una página web NO funciona adecuadamente, podría ser un error de la base de datos. 
+        Si se asegura que el archivo de conexión de la base de datos está correcto, 
+        ¿cuál de las siguientes situaciones podría causar el problema?
+        
+        ƒ El gestor de bases de datos no está activo
+        El intérprete no tiene las funciones de conexión
+        El servidor web no recibe las peticiones
+
+    Pregunta 4
+
+        Selecciona los tres elementos que conforman al servidor que 
+        se utiliza como entorno de ejecución en los proyectos de Back-End.
+
+    NOK Vista
+    ƒ  Servidor web
+    ƒ  Intérprete
+    NOK Cliente
+    ƒ  Gestor de bases de datos
+        Controlador
+    NOK  Modelo
+
+    Pregunta 5
+        ¿Cuáles de los siguientes programas debes ejecutar para visualizar el funcionamiento del Back-End?
+
+        ƒ Navegador web
+        Servidor
+        Base de datos
+        IDE
+    Pregunta 6
+        ¿Cuál es el lugar físico o directorio que muestra una interfaz gráfica que permite la creación y administración de las bases de datos?
+        http://localhost/
+        http://localhost/info.php
+        ƒ http://localhost/phpmyadmin
+
+    Pregunta 7
+        Encargado de gestionar toda la información almacenada en el modelo implementado para una aplicación web en específico:
+
+        Base de datos
+        Servidor web
+        ƒ Gestor de bases de datos
+    Pregunta 8
+        De las siguientes opciones, selecciona dos en donde puede ser útil el desarrollo del Back-End.
+
+        Una clínica que desea mostrar información acerca de sus servicios
+        Una página que ofrece información general acerca de una empresa
+        ƒ Sitio de una tienda que desea realizar ventas por Internet
+        ƒ Una calculadora científica que funcione a través de internet
+    mala Pregunta 9
+        Selecciona tres de las características con las que deben cumplir los requerimientos establecidos por el cliente.
+
+        ƒ Funcionales
+        Demostrables
+    NOK    ƒ Actuales
+        Consistentes
+        ƒ Necesarios
+    Pregunta 10
+        En un sitio, los componentes del servidor NO pueden comunicarse entre ellos. Las páginas se muestran, 
+        pero el contenido dinámico NO se muestra en ninguna página. 
+        Selecciona dos opciones que muestren una situación que pueda ocasionar estos errores si se asegura el funcionamiento del servidor.
+
+        El intérprete no reconoce la sintaxis del programa ƒ
+    NOK   ƒ El intérprete no se encuentra activo
+        El servidor no está configurado para ejecutar el código ƒ
+    NOK   ƒ El navegador no ejecuta el contenido dinámico
+    --
+    Pregunta 1
+        Al entrar a la página principal del servidor, el navegador muestra un error. Elige dos posibles causas de esta falla.
+
+        El equipo no tiene conexión a internet
+        Instalación incorrecta del servidor
+        ƒ Escribir mal la dirección de localhost
+        ƒ El servidor no se encuentra activo
+    Pregunta 2
+        Durante el desarrollo de un proyecto, el cliente requiere de la implementación de un nuevo módulo que NO fue plasmado en el alcance, 
+        ¿de qué manera debes proceder ante esta situación?
+
+        ƒ Replantear el alcance del proyecto con el cliente y volver a estimar el tiempo y costo del desarrollo
+        Agregar la funcionalidad al alcance del sistema y cumplir con la entrega en tiempo y forma
+        Seguir adelante con el desarrollo y cumplir con todas las expectativas que tiene el cliente
+    Pregunta 3
+        De las siguientes opciones, selecciona dos en donde puede ser útil el desarrollo del Back-End.
+
+        Una clínica que desea mostrar información acerca de sus servicios
+        ƒ Una calculadora científica que funcione a través de internet
+        ƒ El sitio de una tienda que desea realizar ventas por Internet
+        Una página que ofrece información general acerca de una empresa
+
+    mala Pregunta 4
+        Selecciona tres de las características con las que deben cumplir los requerimientos establecidos por el cliente.
+
+        Actuales
+        ƒ Demostrables
+        Funcionales
+        ƒ Consistentes
+        ƒ Necesarios
+    Pregunta 5
+        ¿Cuál de los siguientes programas debes ejecutar para visualizar el funcionamiento del Back-End?
+
+        ƒ Navegador
+        Editor de texto
+        Servidor
+    Pregunta 6
+        Al realizar pruebas de funcionamiento de un sitio, 
+        se detecta que la conexión con la bases de datos NO se puede realizar ya que requiere de usuario y contraseña. El usuario administrador No recuerda sus credenciales, por lo que decide cambiarlas. ¿En cuál de los componentes se debe configurar un nuevo usuario y contraseña?
+
+        En el procesamiento de datos
+        ƒ En el sistema gestor de bases de datos
+        En la configuración del servidor web
+
+    Pregunta 7
+        Una página web NO consigue establecer la conexión entre el servidor y la base de datos. 
+        Si se aseguran que el archivo de conexión es correcto, ¿cuál de las siguientes situaciones podría ser la causante del problema?
+
+        ƒ El gestor de bases de datos no está activo
+        El servidor web no recibe las peticiones
+        El intérprete no tiene las funciones de conexión
+    NOK Pregunta 8
+        Ordena los pasos que debes seguir para definir el alcance del proyecto
+
+        Revisar la especificación de los requerimientos
+        Definir criterios de aceptación para evaluar la funcionalidad
+        Diseñar un inventario de entregables y definir fechas
+        Elaborar un plan de trabajo para las actividades
+    Pregunta 9
+        Una vez instalado el servidor, ¿de qué manera puedes verificar su funcionamiento?
+
+        ƒ Ingresando a la página de localhost desde el navegador
+        Revisando si se creó la carpeta en donde se almacena
+        Verificando si se inicia el servidor desde el panel de control
+
+
+    Pregunta 10
+        Selecciona los tres elementos que conforman al servidor que se utiliza como entorno de ejecución en los proyectos de Back-End.
+
+        ƒ Servidor web
+        ƒ Intérprete
+        Controlador
+        Modelo
+        ƒ Gestor de bases de datos
+        Cliente
+        Vista
+    ¿Cuál debe de ser la ruta de instalación del servidor?" es:
+    La raíz del disco duro
+    Esta es la opción más apropiada por las siguientes razones:
+
+    Seguridad: Instalar el servidor en la raíz del disco duro ayuda a aislar los archivos del servidor de otros datos y aplicaciones del sistema.
+    Accesibilidad: Una ubicación en la raíz del disco duro facilita la configuración y el acceso a los archivos del servidor.
+    Convención: Es una práctica común instalar servidores web en la raíz del disco duro, lo que facilita la administración y el mantenimiento.
+    Rendimiento: Ubicar el servidor en la raíz puede mejorar el rendimiento al reducir la profundidad de las rutas de acceso.
+
+    Las otras opciones no son ideales:
+
+    "La carpeta de ejecución" es demasiado vaga y podría referirse a múltiples ubicaciones.
+    "El escritorio del usuario" no es una ubicación apropiada para instalar software de servidor, ya que es específica de un usuario y no es una ubicación estándar para software del sistema.
+
+    Por lo tanto, "La raíz del disco duro" es la mejor opción para la ruta de instalación de un servidor.
+
+    Pregunta 10:
+
+    Se encarga de recibir y responder las peticiones que realicen a la página web:
+
+    Intérprete de lenguajes
+    Servidor web
+    Gestor de Bases de Datos
+    Y la respuesta correcta, como ya te mencioné anteriormente, es:
+
+    Servidor web
+    El servidor web es el componente que se encarga de gestionar las solicitudes que los usuarios hacen a un sitio web y de enviar las respuestas correspondientes. Por ejemplo, cuando escribes una dirección web en tu navegador y presionas Enter, estás enviando una petición al servidor web, que a su vez busca la página solicitada y la envía a tu navegador para que la puedas visualizar.
+
+    --
+    Pregunta 
+        Selecciona tres de las características con las que deben cumplir los requerimientos establecidos por el cliente.
+
+        ƒ Funcionales
+        ƒ Demostrables
+        Actuales
+        Consistentes
+        ƒ Necesarios
+    --
+    ¡Claro! Aquí tienes la pregunta y la respuesta:
+
+    Pregunta 7:
+
+    Encargado de procesar todas las instrucciones que se definen en un lenguaje de programación.
+
+    Servidor
+    Cliente
+    Intérprete
+    Respuesta:
+
+    La respuesta correcta es: Intérprete.
+
+
+    Pregunta 10: Un cliente necesita una página web que le ayude en la organización de sus tiempos, además de poder registrar los gastos de algunos servicios. ¿Qué tipo de sitio web le recomendarías para tal fin?
+
+    Análisis de las opciones:
+
+    Dinámico, porque necesita almacenar información y datos específicos: Esta opción es la más correcta. Un sitio web dinámico permite guardar y actualizar información de manera individualizada. En este caso, el cliente necesitaría almacenar datos como horarios, tareas y gastos, los cuales deben ser personalizables y actualizables con el tiempo.
+    Dinámico, ya que un buen diseño del sitio facilitará la interacción con el usuario: Aunque un buen diseño es importante para cualquier sitio web, la característica principal que se requiere en este caso es la capacidad de almacenar y gestionar datos.
+    Estático, porque el sitio será personal y el cliente será el único usuario de la página: Un sitio estático muestra siempre la misma información y no permite interacciones como guardar datos. Para una herramienta de organización personal, se necesita un sitio que sea dinámico y permita al usuario introducir y modificar información.
+    Respuesta:
+
+    La mejor opción para el cliente es un sitio web dinámico. Esto se debe a que necesita un sitio que le permita:
+
+    Almacenar información personal: Horarios, tareas y gastos.
+    Actualizar la información: A medida que el cliente realice cambios en su organización o registre nuevos gastos.
+    Personalizar la experiencia: Adaptar el sitio a sus necesidades específicas.
+    En resumen, la respuesta correcta es:
+
+    Dinámico, porque necesita almacenar información y datos específicos.
+    ---
+    Pregunta 2
+    Selecciona en cuál de los siguientes casos es más conveniente utilizar una estructura iterativa.
+
+    Verificar si los datos ingresados en el campo de un formulario es un correo electrónico
+    Mostrar la página de inicio de su perfil mientras que el usuario no cierre su sesión
+    nok ƒ Verificar si los datos que ingresó un usuario son correctos para iniciar su sesión
+    --
+    Pregunta 3 y Respuesta
+    Pregunta: De las siguientes medidas, ¿cuáles son correctas para cuidar tu postura al pasar tiempos prolongados sentado en la computadora?
+
+    ƒ I. Mantener la cabeza en alto
+    II. Conservar una distancia de 20 cm. del monitor
+    III. Tener un ángulo de 45° al flexionar tu brazo y antebrazo
+    ƒ IV. Recargar tu espalda en la silla
+    ƒ V. Apoyar firmemente los pies al piso
+    Respuesta:   
+
+    La opción correcta es: I, II, IV, V
+    ---
+    Pregunta y Respuesta
+    Pregunta 4:
+    Selecciona en cuál de los siguientes ejemplos se refleja la imparcialidad como producto de una acción ética.
+
+    Un líder de proyecto cuenta con cinco miembros en su equipo. 
+    A pesar de la buena relación que sostiene con tres miembros, 
+    trata a todos los integrantes por igual.
+
+    El líder de proyecto decide utilizar una licencia ilegal para el desarrollo de una página. 
+    Ante esta situación los desarrolladores deciden no colaborar con el proyecto.
+
+    El líder de un equipo de trabajo convence a sus integrantes de la importancia y valor de su trabajo. 
+    Les hace ver el impacto que causa su labor en la empresa.
+    Respuesta:
+
+    La opción que mejor refleja la imparcialidad como producto de una acción ética es:
+
+    Un líder de proyecto cuenta con cinco miembros en su equipo. 
+    A pesar de la buena relación que sostiene con tres miembros, trata a todos los integrantes por igual.
+
+    ¡Claro! Aquí tienes las preguntas y respuestas completas:
+
+    Preguntas:
+    Pregunta 5:
+    Selecciona cuál de las siguientes es una medida que te ayudará a mantener organizada tu área de trabajo.
+
+    Retirar los objetos que ocupan mucho espacio y dejar solo aquellos que ocupes con frecuencia o de manera ocasional
+    Realizar inspecciones de limpieza al equipo de cómputo y de manera eventual, limpiar tu área de trabajo
+    ƒ Ordenar cada objeto en un lugar específico y siempre guardarlo en el mismo lugar después de utilizarlo
+
+    Pregunta 5: La mejor opción para mantener un área de trabajo organizada es ordenar cada objeto en un lugar específico y siempre guardarlo en el mismo lugar después de utilizarlo.
+
+    Pregunta 6:
+    Selecciona en cuál de los siguientes casos es más conveniente utilizar una estructura de selección.
+
+    ƒ Mostrar la página de inicio de su perfil mientras que el usuario no cierre su sesión
+    Verificar si los datos que ingresó el usuario son correctos para iniciar su sesión
+    Recibir como datos de entrada la información ingresada en un formulario
+    Calcular el costo total de los productos agregados a un carrito de compras
+
+    Una estructura de selección es más útil cuando se necesita tomar una decisión basada en una condición. 
+    En este caso, la opción correcta es verificar si los datos que ingresó el usuario son correctos para iniciar su sesión.
+
+    Pregunta 7:
+    A Luis lo acaban de promover debido a sus conocimientos y su disposición a trabajar en equipo, 
+    brindando seguridad a sus compañeros. ¿Qué valor demuestra Luis?
+
+    Respeto
+    Congruencia
+    Confianza
+    Pregunta 7: Al brindar seguridad a sus compañeros y demostrar sus conocimientos, Luis está demostrando confianza. Esta confianza se construye a partir de la competencia y la fiabilidad, lo que lo convierte en un líder confiable para su equipo.
+
+    Pregunta 8:
+    ¿Cuál de las siguientes es una acción que ayuda a prevenir daños al equipo de cómputo?
+
+    Mantener el brillo de pantalla moderado
+    nok ƒ Conectar los equipos a reguladores
+    Usar el equipo máximo 8 horas al día
+
+    Pregunta 9:
+    Selecciona dos beneficios que otorga la ética profesional.
+
+    ƒ Mostrar fidelidad con el trabajo
+    nok ƒ Aceptar las diferencias de otros
+    Evitar conflictos con compañeros
+    ? Generar un sentido de pertenencia
+    Pregunta 10:
+    Selecciona dos características que deben cumplir los lenguajes de programación.
+
+    Están diseñados de manera descendente
+    Tienen un diseño modular y secuencial
+    ƒ Pueden ser interpretados por computadoras
+    ƒ Son un conjunto de reglas sintácticas
+
+    Pregunta 2:
+    Selecciona tres ventajas de trabajar como freelance.
+
+    ƒ Eliges donde vas a desarrollar tus actividades laborales
+    ƒ Administras tu tiempo en función de tus necesidades
+    ƒ Ahorras tiempo y dinero si decides trabajar desde casa
+    Cuentas con un horario de comidas de acuerdo a tu horario
+    Te trasladas a un lugar de trabajo predeterminado
+    Respuesta:
+
+    Eliges donde vas a desarrollar tus actividades laborales
+    Administras tu tiempo en función de tus necesidades
+    Ahorras tiempo y dinero si decides trabajar desde casa
+
+    Pregunta 3:
+    Selecciona dos características del paradigma de programación estructurada.
+
+    Ajusta el problema al lenguaje ?
+    Hace uso de objetos
+    ƒ Tienen un diseño modular
+    ƒ Cuentan con tres estructuras
+    Respuesta:
+
+    Tienen un diseño modular
+    Cuentan con tres estructuras
+
+    Pregunta 4:
+    En tu entorno laboral te desempeñas de tal forma que tus palabras 
+    se asemejan a tus conductas. El valor que reflejas es:
+
+    Honradez
+    Confidencialidad
+    ƒ Congruencia
+
+    ¡Claro! Aquí tienes el texto completo de las preguntas y sus respuestas:
+
+    Pregunta 4:
+    En tu entorno laboral te desempeñas de tal forma que tus palabras se asemejan a tus conductas. El valor que reflejas es:
+
+    Honradez
+    Confidencialidad
+    Congruencia
+    Respuesta: Congruencia.
+
+    Explicación: La congruencia implica que tus acciones coinciden con tus palabras y valores. Cuando tus palabras y tus conductas son coherentes, estás demostrando integridad y fiabilidad en tu trabajo.
+
+    Pregunta 5:
+    Selecciona en cuál de los siguientes casos es más conveniente utilizar una estructura de selección.
+
+    Calcular el costo total de los productos agregados a un carrito de compras
+    Recibir como datos de entrada la información ingresada en un formulario
+    ƒ Verificar si los datos que ingresó el usuario son correctos para iniciar su sesión
+    Respuesta: Verificar si los datos que ingresó el usuario son correctos para iniciar su sesión.
+
+    Pregunta 6:
+    Selecciona en cuál de los siguientes ejemplos se refleja la imparcialidad como producto de una acción ética.
+
+    El líder de un equipo de trabajo convence a sus integrantes de la importancia y valor de su trabajo. Les hace ver el impacto que causa su labor en la empresa.
+    Un líder de proyecto cuenta con cinco miembros en su equipo. A pesar de la buena relación que sostiene con tres miembros, trata a todos los integrantes por igual.
+    El líder de proyecto decide utilizar una licencia ilegal para el desarrollo de una página. Ante esta situación los desarrolladores deciden no colaborar con el proyecto.
+    Respuesta: Un líder de proyecto cuenta con cinco miembros en su equipo. 
+        A pesar de la buena relación que sostiene con tres miembros, trata a todos los integrantes por igual.
+
+    Pregunta 7:
+    El encargado de un proyecto cree que lo mejor que puede hacer con sus colaboradores es motivarlos y darles espacio para relajarse y descansar; sin embargo, la carga de trabajo impuesta solo logra que sus colaboradores se encuentren descontentos, fatigados y estresados. ¿Cuál de los siguientes valores NO se está aplicando de manera correcta?
+
+    Confianza
+    Congruencia
+    Honestidad
+    Respuesta: Honestidad.
+
+    Pregunta 8:
+    Selecciona dos características que deben cumplir los lenguajes de programación.
+
+    Tienen un diseño modular y secuencial
+    ƒ Pueden ser interpretados por computadoras
+    ƒ Son un conjunto de reglas sintácticas
+    Están diseñados de manera descendente
+    Respuesta: Pueden ser interpretados por computadoras y Son un conjunto de reglas sintácticas.
+
+    Pregunta 9:
+    Una empresa de desarrollo web solicita a sus equipos de trabajo propuestas para el desarrollo de la próxima página. 
+    El líder del equipo A comenta una gran propuesta con todos los demás equipos; 
+    pero el líder del equipo B presenta esta idea como propia a sus superiores. 
+    ¿De cuál de los siguientes principios carece el líder del equipo B?
+
+    Originalidad
+    Confidencialidad
+    ƒ Honradez
+
+    Pregunta 10:
+    Selecciona cuál de las siguientes es una medida que te ayudará a mantener organizada tu área de trabajo.
+
+    Retirar los objetos que ocupan mucho espacio y dejar solo aquellos que ocupes con frecuencia o de manera ocasional
+    Realizar inspecciones de limpieza al equipo de cómputo y de manera eventual, limpiar tu área de trabajo
+    ƒ Ordenar cada objeto en un lugar específico y siempre guardarlo en el mismo lugar después de utilizarlo
+    Respuesta correcta: Ordenar cada objeto en un lugar específico y siempre guardarlo en el mismo lugar después de utilizarlo.
+
+Introducción a PHP
+    cmd 
+    php -S localhost:8000
+        
+    <!DOCTYPE html>
+    <!-- http://localhost:8000/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/BACK-END-capacitate/ejercicios/php-en-web.php -->
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <?php 
+                echo "hola";
+                echo "<br>";
+                function suma ($valor1, $valor2) { 
+                    return $valor + $valor2;
+                }
+                function resta ($valor1, $valor2) {
+                    return $valor1 * $valor2;
+                }
+                function multiplicación ($valor1,$valor2) {
+                    return $valor1 - $valor2;
+                }
+                function división ($valor1, $valor2) {
+                    return $valor1 / $valor2;
+                }
+                $valor1 = 1;
+                $valor2 = 1;
+                if ($valor1 and $valor2) {
+                    echo 'Ambos valores son verdaderos'; 
+                    echo "<br>";
+                }
+                if ($valor1 xor $valor2){
+                    echo'Algun valor es falso'; 
+                    echo "<br>";
+                }
+                if (!$valor1 and !$valor2){
+                    echo "ambos son falsos";
+                    echo "<br>";
+                }
+                $valor1 = 5;
+                $valor2 = 6;
+                $valor1 += $valor2;
+                echo 'El valor despues del incremento' .$valor1;
+                echo "<br>";
+                $valor1 -= $valor2;
+                echo 'El valor despues del decremento' .$valor1;
+                echo "<br>";
+                $valor1 *= $valor2;
+                echo 'El valor despues de la multiplicación' .$valor1;
+                echo "<br>";
+                $valor1 /= $valor2;
+                echo 'El valor despues de la división' .$valor1;
+                ?>
+        </div>
+    </body>
+    </html>
+
+        Operadores de Asignación y Aritméticos en Programación
+        Estos operadores se utilizan para modificar el valor de una variable, realizando diversas operaciones matemáticas o de concatenación.
+
+        Asignación
+        =`: Asigna el valor de la expresión de la derecha a la variable de la izquierda.
+        Ejemplo: x = 5 asigna el valor 5 a la variable x.
+        Aritméticos
+        +=: Suma el valor de la expresión de la derecha a la variable de la izquierda y asigna el resultado a la variable.
+        Ejemplo: x += 3 es equivalente a x = x + 3.
+        -=: Resta el valor de la expresión de la derecha a la variable de la izquierda y asigna el resultado a la variable.
+        Ejemplo: x -= 2 es equivalente a x = x - 2.
+        *=: Multiplica el valor de la expresión de la derecha por la variable de la izquierda y asigna el resultado a la variable.
+        Ejemplo: x *= 4 es equivalente a x = x * 4.
+        /=: Divide el valor de la variable de la izquierda entre el valor de la expresión de la derecha y asigna el resultado a la variable.
+        Ejemplo: x /= 2 es equivalente a x = x / 2.
+        %=: Calcula el módulo (resto de la división) del valor de la variable de la izquierda entre el valor de la expresión de la derecha y asigna el resultado a la variable.
+        Ejemplo: x %= 3 asigna a x el resto de dividir x entre 3.
+        Concatenación (específico de algunos lenguajes)
+        .=: Concatena (une) el valor de la expresión de la derecha al valor de la variable de la izquierda y asigna el resultado a la variable.
+        Nota: Este operador es común en lenguajes como JavaScript para concatenar cadenas de texto.
+        Ejemplo: nombre += "Apellido" concatenaría "Apellido" al valor actual de la variable "nombre".
+
+Variables y tipos de datos
+    Nive l 2 Lección 2 Video 2
+    Identifica las situaciones específicas en donde se utilizan las variables y tipos de datos
+
+    <?php
+    // http://localhost:8000/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/BACK-END-capacitate/ejercicios/variables.php
+        $edad;
+        $edad=20;
+        echo "la edad es ". $edad
+    ?>
+
+Uso de vectores
+        Identifica las situaciones en donde es más conveniente el uso de vectores
+        Los vectores en PHP son objetos que almacenan una colección de elementos de un tipo específico. Los vectores en PHP se implementan utilizando la clase stdClass. Los vectores permiten almacenar y manipular datos de manera estructurada y organizada.
+
+        Los vectores en PHP se crean utilizando la clase stdClass y se pueden manipular utilizando la notación de array de PHP o la notación de array estándar de PHP. Los elementos del vector se acceden y modifican utilizando la notación de array, y se pueden eliminar utilizando la función unset().
+
+        Los vectores son útiles para almacenar y manipular datos en aplicaciones PHP, ya que proporcionan una forma estructurada y organizada de almacenar información. También permiten acceder y manipular datos de manera eficiente y fácil de entender.
+
+        En resumen, los vectores en PHP son objetos que almacenan una colección de elementos de un tipo específico, y se implementan utilizando la clase stdClass. Los vectores permiten almacenar y manipular datos de manera estructurada y organizada, y son útiles para almacenar y manipular información en aplicaciones PHP.
+        SON ARREGLOS O ARRAY 
+
+        $vector = new stdClass();
+        $vector->elemento1 = 'valor1';
+        $vector->elemento2 = 'valor2';
+        $vector->elemento3 = 'valor3';
+        echo $vector->elemento1; // salida: valor1
+        echo "<br>";
+        echo $vector->elemento2; // salida: valor2
+        echo "<br>";
+        echo $vector->elemento3; // salida: valor3
+
+Estructuras de decisión
+    Identifica las situaciones en donde es más conveniente hacer uso de estructuras de decisión
+    Nivel 2    Lección 2    Video 4
+    simples
+        if
+    multiples
+        else if
+
+Estructuras de repetición
+    Identifica las situaciones en las que es más conveniente utilizar estructuras de repetición
+    REPETIR 
+    MIENTRAS 
+    PARA 
+        WHILE(CONDICION){
+            // código a ejecutar
+            $i++
+
+        }
+
+        DO{
+            // código a ejecutar
+            $i++
+        } 
+        WHILE(CONDICION);
+        FOR(INICIO;CONDICION:i++){
+
+        }
+
+EXAMEN 
+    80
+
+Conexión a una base de datos
+    Nivel 2    Lección 4    Video con JobAid 1
+    Conexión a una base de datos.pdf
+    COMEXION 
+        SERVIDOR
+            IP/URL SI ESTA EN OTRO SERVIDOR LA BD 
+            LOCALHOST EN LOCAL 
+        NOMBRE BD 
+        USUARIO
+        CONTRASEÑA
+
+        <?php
+            // http://localhost:8080/dashboard/basedatos/conecta.php
+            include './config.php';
+            $servidor = "localhost";
+            $baseDatos = "anima";
+            $usuario = "root";
+            $contrasena = "";
+            // Conectar a la base de datos
+            $conexion = conectar_bd($servidor, $baseDatos, $usuario, $contrasena);
+            if ($conexion) {
+                echo "Conexión establecida con éxito.";
+            } else {
+                echo "No se pudo establecer la conexión.";
+                exit;
+            }
+            $conexion = null;
+        ?>
+        // dashboard/basedatos/config.php
+        // Función para conectar a la base de datos
+        function conectar_bd($servidor, $nombrebd, $usuario, $contrasena) {
+            try {
+                $dsn = "mysql:host=$servidor;dbname=$nombrebd";
+                $conexion = new PDO($dsn, $usuario, $contrasena);
+                $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                return $conexion;
+            } catch (PDOException $e) {
+                echo "Fallo al conectar: " . $e->getMessage();
+                exit;
+            }
+        }
+
+Inserción de registros
+    CODIGO FINAL de aprendizaje
+        // dashboard/basedatos/config.php
+        // http://localhost:8080/dashboard/basedatos/form-ingreso-tester-v2.php
+        // http://localhost:8080/dashboard/basedatos/ingreso-tester.php
+        // http://localhost:8080/dashboard/basedatos/despliega-tabla.php
+        http://localhost:8080/dashboard/basedatos/despliega-tabla-v2.php
+        //error-v2.php
+        //exito-v2.php
+    Emplea las funciones nativas de PHP con bases de datos MYSQL para enviar consultas de inserción de registros.
+
+    creacion de tabla de aprendizaje testers
+        CREATE TABLE testers (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            nombre VARCHAR(100) UNIQUE,
+            correo VARCHAR(100) UNIQUE
+        );
+            
+    REQUISITOS 
+        conexion activa a la BD 
+        nombre de la tabla 
+        nombre de los campos (de c/columna)
+        sintaxis del query 
+        creacion de un formulario
+
+    SANITIZAR DATOS 
+            $nombre = filter_var($_POST["nombre"], FILTER_SANITIZE_STRING);
+            $correo = filter_var($_POST["correo"], FILTER_VALIDATE_EMAIL);
+        Gestión de Errores en la Conexión a la Base de Datos
+            error_log($e->getMessage(), 3, "/var/log/app_errors.log");
+
+            2. Validación y Sanitización
+            Estás usando htmlspecialchars y strip_tags, 
+            lo cual es bueno para sanitizar la entrada del usuario. 
+            Sin embargo, podrías usar la función filter_input() 
+            para obtener y validar directamente los datos del formulario. Por ejemplo:
+
+            $nombre = filter_input(INPUT_POST, 'nombre', FILTER_SANITIZE_STRING);
+            $correo = filter_input(INPUT_POST, 'correo', FILTER_SANITIZE_EMAIL);
+
+    Redirección después de Errores
+        En el bloque de captura de errores (catch), 
+        actualmente estás verificando los errores de clave duplicada, 
+        lo cual está bien. No obstante, 
+        sería bueno incluir una verificación adicional para asegurar 
+        que la redirección funcione correctamente antes de enviar 
+        las cabeceras header para evitar errores de redirección duplicada:
+        php
+        Copiar código
+        if (!headers_sent()) {
+            header("Location: error.php?mensaje=Error al insertar el registro.");
+            exit();
+        }
+    5. Mejora del Manejo de Clave Duplicada
+        Tu código ya maneja las claves duplicadas, lo cual es excelente. 
+        Sin embargo, podrías simplificar la lógica si se prefiere evitar múltiples header:
+            header("Location: error.php?mensaje=" . urlencode("El " . ($duplicadoError == 'nombre' ? 'nombre' : 'correo') . " ya existe.")); 
+     Consideraciones de Seguridad (XSS)
+        Al mostrar mensajes de error en error.php, 
+        es recomendable sanitizar cualquier mensaje que venga de los parámetros de la URL (GET) 
+        para evitar posibles ataques de XSS. Puedes hacer esto con htmlspecialchars():
+                $mensaje = htmlspecialchars($_GET['mensaje']);
+
+Selección de registros
+    Emplea las funciones nativas de PHP con bases de datos SQL 
+    para extraer registros de la base de datos y procesarlos para mostrar un resultado
+    CONSULTA DE SELECCION 
+         REQUISITOS 
+            conexion activa a la BD 
+            nombre de la tabla 
+            nombre de los campos (de c/columna)
+            tipo de dato de cada columna campo
+            sintaxis del query 
+            para seleccion de registros
+Modificación y eliminación de registros
+    Emplea las funciones nativas de PHP con bases de datos MYSQL para modificar y eliminar registros
+    CODIGO EN CARPETA basedatos-test-v3
+        TOOLS
+            copia-codigo.bat     
+            copia-codigo.py      
+            lista.txt    
+        CODIGO        
+            1 conecta-seguro-v3.php <- 3 4 6 7          php
+            2 form-ingreso-tester-v3.php ->3       frm        
+            3 ingreso-tester-v3.php 1<-  <-2            php
+            4 despliega-tabla-v3.php 1<- ->5 ->7   frm  php                
+            5 modificar-tester-v3.php 1<- <-4 ->6  frm  php                
+            6 guardar-modificacion-v3.php 1<- ->4       php           
+            7 eliminar-tester-v3.php 1<- <-4            php       
+            8 error-v3.php  <-3                     frm  php
+            9 exito-v3.php  <-3                     frm  php
+
+    https://capacitateparaelempleo.org/cursos/view/121
+
+    SISTEMA ABC = crud
+        alta bajas y cambios 
+
+    CRUD COMPLETO EN UN SOLO ARCHIVO 
+        http://localhost:8080/dashboard/crud/crud-tester-v1.php
+    LINK A CRUD v1
+        https://chatgpt.com/share/6707da9e-0d5c-800f-b442-4e225082b604
+    CRUD COMPLETO MODULAR V2 
+        http://localhost:8080/dashboard/crud/crud-tester-v2.php
+        https://lambda.chat/chatui/conversation/6707dbe53b43d5035bcfa0f3
+Manejo de cookies
+    Desarrolla módulos para el almacenamiento de datos mediante el manejo de cookies
+
+    Cookies son pequeños archivos de texto que se almacenan 
+    en el navegador del usuario para guardar información 
+    específica durante un período de tiempo.
+
+        En PHP, puedes 
+            crear, 
+            modificar 
+            y eliminar cookies usando las funciones 
+                setcookie() y 
+                $_COOKIE.
+
+        Crear una cookie:
+            setcookie("nombre_cookie", "valor_cookie", tiempo_expiracion);
+                
+        Ejemplo:
+
+            setcookie("usuario", "Juan", time() + 3600); // Expira en 1 hora
+                
+        Leer una cookie:
+            $valor_cookie = $_COOKIE["nombre_cookie"];
+                
+        Ejemplo:
+
+            $usuario = $_COOKIE["usuario"];
+            echo "Bienvenido, " . $usuario;
+                
+        Modificar una cookie:
+            setcookie("nombre_cookie", "nuevo_valor");
+                
+            Ejemplo:
+
+                setcookie("usuario", "Pedro");
+                
+        Eliminar una cookie:
+            setcookie("nombre_cookie", "", time() - 3600);
+                
+            Ejemplo:
+                setcookie("usuario", "", time() - 3600);
+                
+
+        Recuerda que las cookies se deben enviar antes de cualquier 
+        salida HTML o del cuerpo de la respuesta.
+
+        <?php
+
+        // http://localhost:8080/dashboard/inicia-kookie.php
+        function crea_kookie($clave,$valor,$tiempo){
+            setcookie($clave, $valor, time() + $tiempo);
+            echo "se creo la kookie: Clave: ".$clave." Valor: ".$valor;
+            echo "<br>";
+        }
+        //presenta la kookie
+        
+        if (isset($_COOKIE["nombre"])) {
+            $usuario = $_COOKIE["nombre"];
+            echo "Bienvenido, " . $usuario;
+            echo "<br>";
+
+        } else {
+            echo "No se encontró la cookie 'nombre'";
+            echo "<br>";
+            //expira en 60 seg
+            crea_kookie("nombre","jorge vera",60);
+        }
+    ?>
+Manejo de sesiones
+    Desarrolla módulos para el almacenamiento de datos mediante el manejo de sesiones
+
+    ¿Qué son las sesiones en PHP?
+        Las sesiones en PHP son una forma de almacenar información sobre un usuario a través de múltiples páginas de un sitio web. Esta información se almacena en el servidor y se vincula a un identificador único de sesión, que se envía al navegador del usuario en forma de cookie.
+
+    ¿Para qué sirven las sesiones?
+        Autenticación: 
+            Mantener a los usuarios conectados después de iniciar sesión.
+        Personalización: 
+            Recordar las preferencias de los usuarios 
+                (tema, idioma, etc.).
+        Carritos de compra: 
+            Almacenar los productos que un usuario ha agregado al carrito.
+        Seguimiento de usuarios: 
+            Realizar un seguimiento de las acciones de los usuarios en un sitio web.
+        ¿Cómo funcionan las sesiones?
+        Inicio de sesión: 
+            Se llama a la función session_start() 
+            al principio de cada página donde se necesite utilizar las sesiones. 
+            Esto inicia una nueva sesión o reanuda una existente.
+        Almacenamiento de datos: 
+            Se utilizan las variables 
+            de la superglobal $_SESSION 
+            para almacenar los datos de la sesión.
+        Acceso a los datos: 
+            Se accede a los datos almacenados en la sesión utilizando 
+            las variables de la superglobal $_SESSION.
+        Cierre de sesión: 
+            Se utiliza la función session_destroy() 
+            para destruir una sesión.
+        
+            Ejemplo básico:
+            PHP
+            <?php
+                session_start();
+
+                // Almacenar datos en la sesión
+                $_SESSION['nombre'] = 'Juan';
+                $_SESSION['edad'] = 30;
+
+                // Acceder a los datos de la sesión
+                echo "Hola, " . $_SESSION['nombre'] . ". Tienes " . $_SESSION['edad'] . " años.";
+
+                // Destruir la sesión (opcional)
+                // session_destroy();
+            ?>
+        Usa el código con precaución.
+
+        Funciones importantes:
+            session_start(): 
+                Inicia una sesión.
+            session_destroy(): 
+                Destruye una sesión.
+            session_unset(): 
+                Elimina todas las variables de sesión.
+            $_SESSION: 
+            Superglobal que contiene todas las variables de sesión.
+
+        Consideraciones importantes:
+            Seguridad: 
+                Las sesiones son vulnerables a ataques de secuestro de sesión. 
+                Es importante tomar medidas de seguridad para protegerlas, 
+                    como utilizar HTTPS, 
+                    regenerar el ID de sesión periódicamente 
+                    y proteger los datos almacenados en la sesión.
+            Duración: 
+                Las sesiones tienen una duración predeterminada, 
+                pero se puede configurar mediante 
+                la directiva session.gc_maxlifetime en el archivo php.ini.
+            Almacenamiento: 
+                Los datos de sesión se almacenan en el servidor, 
+                generalmente en archivos.
+
+            $_SESSION es un arrego superglobal
+        <?php
+        // http://localhost:8080/dashboard/inicia-sesion.php
+        // Almacenar datos en la sesión
+        // $_SESSION['nombre'] = 'Juan';
+        // $_SESSION['edad'] = 30;
+
+        // Acceder a los datos de la sesión
+            session_start();
+
+            function inicia_sesion($clave,$valor){
+                $_SESSION[$clave]=$valor;
+            }
+            // MUESTRA EL CONTENIDO DE LA SESION
+            function presenta_sesion($clave){
+                return $_SESSION[$clave];
+
+            }
+            // borra_sesion()
+            function borra_sesion(){
+                session_destroy();
+                echo "se elimino la sesion";
+            }
+            function imprime_sesion(){
+                print_r($_SESSION);
+                echo "<br";
+                var_dump($_SESSION); 
+            }
+            // inicia_sesion("nombre","Juancho");
+            $valor=presenta_sesion( "nombre" );
+            echo "la clave nombre tiene un valor de: " .$valor . "<br>";
+            imprime_sesion()
+        ?>
+Gestión y almacenamiento de información
+    Gestión y almacenamiento de información
+    Propósito de la actividad
+
+    Desarrollar páginas web que utilicen distintos métodos de almacenamiento de 
+    datos con el fin de aplicar el método que mejor se acople a las necesidades o 
+    requerimientos de los clientes.
+
+    Investiga tres sistemas gestores de bases de datos que se utilizan en el 
+        Nombre	Lenguaje	Características principales	    Ventajas	                        Desventajas
+        MySQL	    C/C++	Relacional, de código abierto,  altamente optimizado para consultas, 
+                                                            gran comunidad, 
+                                                            soporte para múltiples plataformas.	
+                                                            Fácil de usar, 
+                                                            rápido, escalable, 
+                                                            gran cantidad de documentación 
+                                                            y herramientas disponibles, 
+                                                            bajo costo.	
+                                                                                                Puede tener limitaciones 
+                                                                                                en transacciones complejas 
+                                                                                                para grandes volúmenes de datos.
+                                                                                                Más propenso a inyecciones SQL, 
+                                                                                                menos orientado a objetos, 
+                                                                                                menos flexible que MySQLi y PDO.
+        PostgreSQL	C	    Relacional, de código abierto,  altamente extensible, 
+                                                            ACID-compliant, gran variedad de 
+                                                            tipos de datos, soporte para JSON 
+                                                            y XML.	
+                                                            Muy flexible y personalizable, 
+                                                            robusto, excelente soporte para 
+                                                            datos espaciales y de series 
+                                                            temporales.	
+                                                                                                Puede tener una curva de aprendizaje
+                                                                                                más pronunciada que MySQL.
+        MongoDB	    C++	    No relacional,                  orientado a documentos, escalable,
+                                                            altamente disponible.	
+                                                            Flexibilidad para modelar 
+                                                            datos complejos, alta escalabilidad, 
+                                                            fácil de aprender y usar.	
+                                                            Puede ser más difícil de optimizar 
+                                                            consultas complejas, 
+                                                            menos maduro en términos de estándares SQL.
+        MySQLi	Extensión de PHP para MySQL,                orientado a objetos y procedural.	
+                                                            Fácil de usar, rápido, ofrece un buen 
+                                                            equilibrio entre flexibilidad y seguridad.	
+                                                                                                        Más específico para MySQL, 
+                                                                                                        menor flexibilidad en comparación con PDO.
+        PDO	    Interfaz de acceso a datos de PHP, 
+                                                            permite interactuar con múltiples SGBD.
+                                                            flexible, orientado a objetos, 
+                                                            preparado para prevenir inyecciones SQL, 
+                                                            compatible con múltiples SGBD.	
+                                                                                                        Puede tener una curva de aprendizaje 
+                                                                                                        un poco más pronunciada, 
+                                                                                                        requiere un poco más de código.     
+
+    Una  escuela  requiere  de  un  sistema  para  el  registro  de  calificaciones. 
+        Desarrolla dicho sistema considerando las siguientes características: 
+        
+         Los usuarios del sistema deben ser ingresados 
+        mediante la interfaz gráfica del SGBD. 
+         El sistema debe contar con un módulo para el inicio de sesión 
+         Utiliza  una  sesión  para  almacenar  el  nombre  y  tipo  de 
+        usuario 
+         Deben existir dos tipos de usuario: 
+             Profesor: 
+                puede registrar, actualizar y borrar las 
+                calificaciones de los alumnos 
+             Alumno: 
+                sólo puede consultar las calificaciones 
+         El sistema debe calcular el promedio general del alumno 
+         Las calificaciones que se registran son de 3 materias: 
+             Español 
+             Matemáticas 
+             Historia 
+         Utiliza el siguiente diagrama de flujo como una guía para 
+        desarrollar el sitio. 
+                1(INICIO)
+                2[SE MUESTRA LA PAGINA PPAL CON LOS CAMPOS DE INICIO DE SESION]
+                3 <¿DATOS CORRECTOS?> 
+                    NO ->2
+                    SI ->4
+                4 <?TIPO DE USUARIO?>
+                    ALUMNO? -> 5
+                    PROFESOR?->6
+                5 [MUESTRA CALIFICACIONES]->7
+                6 [CRUD ABC PARA REGISTRAR EDITAR ELIMINAR CALIFICACIONES]->7
+                7 (FIN)
+            
+            Análisis y Diseño del Sistema de Gestión de Calificaciones
+                Entendimiento de los Requisitos
+                Basándonos en la descripción y el diagrama de flujo proporcionado, 
+                podemos identificar los siguientes requisitos funcionales:
+
+                Registro de usuarios: 
+                    Los profesores deben poder 
+                        ingresar los datos de los alumnos a través de la interfaz gráfica del SGBD.
+                Inicio de sesión: 
+                    El sistema debe permitir a 
+                        profesores y 
+                        alumnos 
+                            iniciar sesión utilizando sus credenciales.
+                Gestión de usuarios: 
+                    El sistema debe almacenar 
+                        el nombre y 
+                        tipo de usuario en una sesión.
+                Roles de usuario:
+                    Profesor: 
+                        Puede registrar, actualizar y eliminar calificaciones de los alumnos.
+                    Alumno: 
+                        Solo puede consultar sus propias calificaciones.
+                Cálculo de promedios: 
+                    El sistema debe calcular 
+                        el promedio general de cada alumno 
+                        basado en las calificaciones de las tres materias.
+                Materias: 
+                    Se deben registrar calificaciones para las siguientes materias: 
+                        Español,
+                        Matemáticas e 
+                        Historia.
+                Diseño de la Base de Datos
+                    Para almacenar la información del sistema, 
+                    se requiere una base de datos con las siguientes tablas:
+
+                    usuarios: 
+                        id_usuario (PK), nombre, tipo_usuario (profesor o alumno), contraseña.
+                    alumnos: 
+                        id_alumno (PK), id_usuario (FK), nombre_completo.
+                    calificaciones: 
+                        id_calificacion (PK), id_alumno (FK), materia, calificacion.
+
+                Diagrama de Clases (UML)
+                [Imagen de un diagrama de clases UML representando las clases
+                 Usuario, Profesor, Alumno, Calificacion y sus relaciones]
+
+                Código PHP (Ejemplo utilizando PDO)
+                    PHP
+                    <?php
+                    // Conexión a la base de datos (ajusta los datos de conexión)
+                    $servername = "tu_servidor";
+                    $username = "tu_usuario";
+                    $password = "tu_contraseña";
+                    $dbname = "tu_base_de_datos";
+
+                    try {
+                        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                        $conn->setAttribute(PDO::ATTR_ERRMODE,   
+                    PDO::ERRMODE_EXCEPTION);
+                    } catch(PDOException $e) {
+                        echo "Connection failed: " . $e->getMessage();   
+
+                    }
+
+                    // Inicio de sesión
+                    if (isset($_POST['submit'])) {
+                        $username = $_POST['username'];
+                        $password = $_POST['password'];
+
+                        // Consultar usuario en la base de datos
+                        $stmt = $conn->prepare("SELECT * FROM usuarios WHERE nombre=:username AND contraseña=:password");
+                        $stmt->execute(['username' => $username, 'password' => $password]);
+                        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+                        if ($user) {
+                            $_SESSION['user_id'] = $user['id_usuario'];
+                            $_SESSION['user_type'] = $user['tipo_usuario'];
+                            // Redirigir al usuario según su tipo
+                            if ($user['tipo_usuario'] == 'alumno') {
+                                header('Location: alumno.php');
+                            } else {
+                                header('Location: profesor.php');
+                            }
+                        } else {
+                            // Mostrar mensaje de error
+                        }
+                    }
+
+                    // ... Resto del código para las diferentes funcionalidades (registro, consulta, actualización, eliminación)
+                    Usa el código con precaución.
+
+            Consideraciones Adicionales
+                Seguridad: Implementar medidas de seguridad como encriptación de contraseñas, prevención de inyecciones SQL y protección contra XSS.
+                Validación de datos: Validar todos los datos ingresados por el usuario para evitar errores y ataques.
+                Interfaz de usuario: Diseñar una interfaz intuitiva y fácil de usar para los profesores y alumnos.
+                Escalabilidad: Considerar la escalabilidad del sistema si se espera un gran número de usuarios y datos.
+                Mantenimiento: Establecer un plan de mantenimiento para actualizar y corregir errores en el sistema.
+        DESARROLLO 
+            en C:\Users\notebook\Documents\janvera\ARCHIVOSLAB\ESTUDIOS\PHP-BACK-END-capacitate\SIS\desarrollo-sistema-calificaciones.txt
+    akiles
+        https://capacitateparaelempleo.org/cursos/view/121
+                
+                

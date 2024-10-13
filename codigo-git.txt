@@ -1,0 +1,13 @@
+ssh-keygen -t rsa -b 4096 -C "creacion claves pp"
+eval "$(ssh-agent -s)"
+git config --global user.name "yonarev"
+git config --global user.email jorgeveravidela@gmail.com
+git config --list
+----------------SOLO ABAJO -----
+git init
+ls -a
+git add .
+git commit -m "estado inicial" 
+
+git status
+Git log

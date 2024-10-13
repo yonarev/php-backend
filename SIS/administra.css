@@ -1,0 +1,109 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Encabezado */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    color: #555;
+}
+
+/* Formulario */
+form {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho total */
+}
+
+.btn-eliminar {
+    background-color: red; /* Color de fondo rojo */
+    color: white; /* Color del texto blanco */
+    padding: 10px 15px; /* Relleno del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    transition: background-color 0.3s; /* Efecto de transición */
+}
+
+.btn-eliminar:hover {
+    background-color: darkred; /* Color más oscuro al pasar el ratón */
+}
+.btn_modifica{
+    background-color: #007BFF; /* Color de fondo azul */
+    color: #fff; /* Color del texto blanco */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Efecto de transición */
+}
+.btn_modifica:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+}
+
+/* Tabla de administradores */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #007BFF; /* Encabezado de tabla azul */
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Filas pares con un color de fondo gris claro */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Color de fondo al pasar el ratón por la fila */
+}
+
+/* Mensajes de éxito y error */
+.success-message {
+    color: green;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    font-weight: bold;
+}

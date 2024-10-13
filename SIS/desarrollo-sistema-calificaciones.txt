@@ -1,0 +1,150 @@
+Una  escuela  requiere  de  un  sistema  para  el  registro  de  calificaciones. 
+    Desarrolla dicho sistema considerando las siguientes características: 
+    
+     Los usuarios del sistema deben ser ingresados 
+    mediante la interfaz gráfica del SGBD. 
+     El sistema debe contar con un módulo para el inicio de sesión 
+     Utiliza  una  sesión  para  almacenar  el  nombre  y  tipo  de 
+    usuario 
+     Deben existir dos tipos de usuario: 
+         Profesor: 
+            puede registrar, actualizar y borrar las 
+            calificaciones de los alumnos 
+         Alumno: 
+            sólo puede consultar las calificaciones 
+     El sistema debe calcular el promedio general del alumno 
+     Las calificaciones que se registran son de 3 materias: 
+         Español 
+         Matemáticas 
+         Historia 
+     Utiliza el siguiente diagrama de flujo como una guía para 
+    desarrollar el sitio. 
+            1       (INICIO)
+            2[SE MUESTRA LA PAGINA PPAL CON LOS CAMPOS DE INICIO DE SESION]->3
+            0[la pagina tiene un menu con los siguientes items]
+                admin           | solo ingresa como superusuario para crear administradores con CRUD ABC
+                profesores      | formulario de registro de profesor solo como administrador o superusuario con CRUD ABC 
+                alumnos         | ingreso de alumnos por profesor
+                calificaciones  | ingreso de calificaciones por profesor crud y si es alumno solo ve las calificaciones
+                inicio          | login si ingresa: admin se activa todo -(califiaciones,alumnos)// super se activa todo //alumnos solo ve calificaciones
+                registro        | solo si ingresa superusuario , registros de actividades en tablas profesores,alumnos,calificaciones
+            3 <¿DATOS CORRECTOS?> 
+                NO ->2 permite solo visualizar
+                SI ->4 dependiendo del usuario es visor o crud
+                    si es alumno 
+                        es visor solo de calificaciones
+                    si es profesor 
+                        es crud alumnos
+                        es crud ramos
+                        es crud de calificaciones suyas a los alumnos
+                        y edicion de su propio registro como profesor.
+                    si es administrador 
+                        es crud profesores
+                        editor de su propio registro admin
+                        y visor de todo. 
+                    si es superusuario es 
+                        editor de su propio registro super
+                        crud admin 
+                        y visor de todo.
+            4 <?TIPO DE USUARIO?>
+                ALUMNO? -> 5 visor
+                PROFESOR?->6,7,8,9 crud alumnos, ramos,calificaciones y editor de su propio registro profesor
+                SUPER?->10,11
+                ADMIN?->6,11 admin
+            5 [MUESTRA CALIFICACIONES (visor al alumno)]->12
+            6 [CRUD ABC PARA REGISTRAR EDITAR ELIMINAR PROFESORES (por admin,propia edicion profesor sin eliminacion)]->11
+            7 [CRUD ABC PARA REGISTRAR EDITAR ELIMINAR ALUMNOS (por profesor, condicion alumno sin calificaciones)]->8 ->9
+            8 [CRUD ABC PARA REGISTRAR EDITAR ELIMINAR CALIFICACIONES (por profesor)]->7->9
+            9 [CRUD ABC PARA REGISTRAR EDITAR ELIMINAR RAMOS (por profesor,condicion ramos sin notas)]->7 ->8
+            10[CRUD ABC PARA ADMIN (por super,puede ingresar y editar admin,eliminar condicion no haber creado profesores)] ->11
+            11[CRUD ABC PARA VISUALIZAR REGISTRO "SESION" (por super y admin)]->12
+                (el super ingresa nuevos admin,el admin ingresa profesores,el profesor ingresa alumnos,ramos,notas)
+            12 [EDICION DE REGISTRO PROFESOR (por admin)]
+            12     (FIN)
+        
+        Análisis y Diseño del Sistema de Gestión de Calificaciones
+            Entendimiento de los Requisitos
+            Basándonos en la descripción y el diagrama de flujo proporcionado, 
+            podemos identificar los siguientes requisitos funcionales:
+            Registro de usuarios: 
+                Los profesores deben poder 
+                    ingresar los datos de los alumnos a través de la interfaz gráfica del SGBD.
+            Inicio de sesión: 
+                El sistema debe permitir a 
+                    profesores y 
+                    alumnos 
+                        iniciar sesión utilizando sus credenciales.
+            Gestión de usuarios: 
+                El sistema debe almacenar 
+                    el nombre y 
+                    tipo de usuario en una sesión.
+            Roles de usuario:
+                Profesor: 
+                    Puede registrar, actualizar y eliminar calificaciones de los alumnos.
+                Alumno: 
+                    Solo puede consultar sus propias calificaciones.
+            Cálculo de promedios: 
+                El sistema debe calcular 
+                    el promedio general de cada alumno 
+                    basado en las calificaciones de las tres materias.
+            Materias: 
+                Se deben registrar calificaciones para las siguientes materias: 
+                    Español,
+                    Matemáticas e 
+                    Historia.
+            Diseño de la Base de Datos
+                Para almacenar la información del sistema, 
+                se requiere una base de datos con las siguientes tablas:
+                usuarios: 
+                    id_usuario (PK), nombre, tipo_usuario (profesor o alumno), contraseña.
+                alumnos: 
+                    id_alumno (PK), id_usuario (FK), nombre_completo.
+                calificaciones: 
+                    id_calificacion (PK), id_alumno (FK), materia, calificacion.
+                tablas adicionales 
+                    ramos 
+                    admin 
+                    registro
+        Consideraciones Adicionales
+            Seguridad: 
+                Implementar medidas de seguridad como 
+                encriptación de contraseñas, 
+                prevención de inyecciones SQL 
+                y protección contra XSS.
+            Validación de datos: 
+                Validar todos los datos ingresados por el usuario 
+                para evitar errores y ataques.
+            Interfaz de usuario: 
+                Diseñar una interfaz intuitiva 
+                y fácil de usar para los profesores y alumnos.
+            Escalabilidad: 
+                Considerar la escalabilidad del sistema 
+                si se espera un gran número de usuarios y datos.
+            Mantenimiento: 
+                Establecer un plan de mantenimiento 
+                para actualizar y corregir errores en el sistema.
+
+        	sistema  para  el  registro  de  calificaciones															
+																			
+                Calificaciones		  administra		    profesores		    alumnos		        ramos		                    login								
+                de los alumnos																	    	
+
+                tabla               tabla                   tabla               tabla               tabla           lista           tabla
+                calificaciones		administradores		    profesores		    alumnos		        ramos		    tipos		    logs							
+
+                id_cal		        id_adm		            id_pro		        id_alu		        id_ram		    super		    id_log				 			
+                id_alu		        nombre_adm		        nombre_pro		    id_pro_alu		    id_pro_ram	    admin		    tipo_log						
+                id_ram		        cargo_adm		        apellidos_pro	    nombre_alu		    nombre_ram	    profesor        fecha_log					
+                notas_ram		    tipo_adm 		        rut_pro		        apellidos_alu				        alumno		    hora_ini_log							
+                promedio_ram		                        correo_pro		    rut_alu		 		                usuario 		hora_fin_log							
+                				                            ramos_pro		    correo_alu		 				                    reg_log						
+                					                                            ramos_alu		 								
+                                                                        
+                crud para profesor  crud para super         crud para admin     crud para profesor  crud para profesor              visor para super y admin
+                visor para todos    edita propio registro   visor para todos    visor para todos    visor para todos                
+                                                            edita propio registro    
+                
+
+
+
+        

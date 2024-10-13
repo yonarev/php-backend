@@ -1,0 +1,206 @@
+Una  escuela  requiere  de  un  sistema  para  el  registro  de  calificaciones. 
+    Desarrolla dicho sistema considerando las siguientes características: 
+    
+     Utiliza el siguiente diagrama de flujo como una guía para 
+    desarrollar el sitio. 
+            1       (INICIO)
+            2[SE MUESTRA LA PAGINA PPAL CON LOS CAMPOS DE INICIO DE SESION]->3
+            0[la pagina tiene un menu con los siguientes items]
+                logo            | imagen logotipo del sistema
+                administra      | solo ingresa como superusuario para crear administradores con CRUD ABC
+                profesores      | formulario de registro de profesor solo como administrador o superusuario con CRUD ABC 
+                alumnos         | ingreso de alumnos por profesor
+                calificaciones  | ingreso de calificaciones por profesor crud y si es alumno solo ve las calificaciones
+                inicio          | login si ingresa: admin se activa todo -(califiaciones,alumnos)// super se activa todo //alumnos solo ve calificaciones
+                registro        | solo si ingresa superusuario , registros de actividades en tablas profesores,alumnos,calificaciones "sesiones"
+                Ayuda en línea  | siempre sobre footer ayuda en linea
+                footer          | datos del programa, etc
+            3 <¿DATOS CORRECTOS?> 
+                NO ->2 permite solo visualizar calificaciones,ramos,alumnos,profesores
+                SI ->4 dependiendo del usuario es visor o crud
+                    si es alumno 
+                        es visor solo de calificaciones
+                        no puede editar ni ver nada mas
+                    si es profesor 
+                        es crud alumnos no puede eliminar alumno si ya tiene nota
+                        es crud ramos no puede eliminar ramos si se ocupan en notas
+                        es crud de calificaciones suyas a los alumnos
+                        no puede editar notas de otros profesores
+                        y edicion de su propio registro como profesor.
+                        no puede ver 
+                    si es administrador 
+                        es crud profesores
+                        editor de su propio registro admin
+                        y visor de todo. 
+                    si es superusuario es 
+                        editor de su propio registro super
+                        crud admin 
+                        y visor de todo.
+                    si es visita 
+                        puede verlo incluso el registro
+                        ingresa como usuario:visita pass: visita sin correo
+                        no puede editar absolutamente nada
+                        queda en el registro que como usuario visita
+            4 <?TIPO DE USUARIO?>
+                ALUMNO? -> 5 
+                PROFESOR?->6,7,8,9 
+                SUPER?->10,11
+                ADMIN?->6,11 
+                VISITA?->11,12
+            5 [MUESTRA CALIFICACIONES (visor al alumno)]->12
+                (las calificaciones son visibles por todos los usuarios super,admin,alumno,visita)
+            6 [CRUD ABC PARA REGISTRAR EDITAR ELIMINAR PROFESORES]->11
+                (CRUD solo por admin)
+                (el admin no puede eliminar un profesor si el profesor ya creo ramos,alumnos,calificaciones)
+                (el profesor tiene propia edicion de su registro sin eliminacion)
+                (profesores visibles por super,admin y visita)
+            7 [CRUD ABC PARA REGISTRAR EDITAR ELIMINAR ALUMNOS]->8 ->9
+                (CRUD solo por profesor que haya ingresado al alumno,)
+                (no puede eliminar alumno que calificaciones en otros ramos de otros profesores)
+                (alumnos visibles por super,admin y visita)
+            8 [CRUD ABC PARA REGISTRAR EDITAR ELIMINAR CALIFICACIONES ]->7->9
+                (CRUD solo por profesor de sus propios ramos)
+                (profesor no puede editar calificaciones de ramos de otro profesor)
+                (calificaciones visibles por super,admin y visita)
+            9 [CRUD ABC PARA REGISTRAR EDITAR ELIMINAR RAMOS ]->7 ->8
+                (CRUD solo por profesor que creo el ramo,condicion ramos sin notas)
+                (ramos visibles por super,admin,alumno y visita)
+            10[CRUD ABC PARA ADMIN ] ->11
+                (super,puede ingresar y editar admin,eliminar si admin no ha creado profesores)
+                (admin solo puede editar su propio registro pero no eliminar)
+                (super puede editar su propio registro peron no eliminar)
+                (visita no puede ver super ni admin)
+            11[VISUALIZA REGISTRO "SESION" ]->12
+                (por super y admin)
+                (el super ingresa nuevos admin,el admin ingresa profesores,el profesor ingresa alumnos,ramos,notas)
+                (solo se admite visualizacion por visita admin y super, y ningun usuario puede editar)
+                (visita puede ver registro)
+            12   (FIN)
+        
+        Consideraciones Adicionales
+            Seguridad: 
+                Implementar medidas de seguridad como 
+                encriptación de contraseñas, 
+                prevención de inyecciones SQL 
+                y protección contra XSS.
+            Validación de datos: 
+                Validar todos los datos ingresados por el usuario 
+                para evitar errores y ataques.
+            Interfaz de usuario: 
+                Diseñar una interfaz intuitiva 
+                y fácil de usar para los profesores y alumnos.
+            Escalabilidad: 
+                Considerar la escalabilidad del sistema 
+                si se espera un gran número de usuarios y datos.
+            Mantenimiento: 
+                Establecer un plan de mantenimiento 
+                para actualizar y corregir errores en el sistema.
+            Control de Versiones: 
+                Utiliza un sistema de control de versiones como Git 
+                para gestionar el código y facilitar la colaboración.
+            Pruebas: 
+                Realiza pruebas unitarias, de integración 
+                y de aceptación para garantizar la calidad del software.
+
+            sesion:
+                implementar una función de "recordar sesión" 
+                para mejorar la experiencia del usuario, especialmente para profesores 
+                o administradores que acceden frecuentemente.
+            interfaz:
+                 Asegúrate de que la interfaz sea responsiva 
+                 compatible con dispositivos móviles) 
+                 y accesible para personas con discapacidades, 
+                 aplicando principios de diseño accesible 
+                 como ARIA para mejorar la usabilidad.
+            estress: 
+                Incluye pruebas automatizadas para validar la seguridad 
+                y funcionalidad del sistema de forma continua. 
+                Las pruebas de estrés pueden ayudarte a anticipar 
+                problemas de rendimiento bajo carga.
+
+        sistema  para  el  registro  de  calificaciones															
+																			
+                Calificaciones		  administra		    profesores		    alumnos		        ramos		                    login								
+                de los alumnos																	    	
+
+                tabla               tabla                   tabla               tabla               tabla           lista           tabla
+                calificaciones		administradores		    profesores		    alumnos		        ramos		    tipos		    logs							
+
+                id_cal		        id_adm		            id_pro		        id_alu		        id_ram		    super		    id_log      				 			
+                id_alu_cal		    nombre_adm		        nombre_pro		    id_pro_alu		    id_pro_ram	    admin		    tipo_log     						
+                id_ram_cal		    cargo_adm		        apellidos_pro	    nombre_alu		    nombre_ram	    profesor        fecha_log   					
+                notas_ram_cal       tipo_adm 		        rut_pro		        apellidos_alu				        alumno		    hora_ini_log							
+                promedio_ram_cal    correo_pro		        rut_alu		 		correo_alu                          visita		    hora_fin_log							
+                id_pro_cal			psw_adm	                ramos_pro		    ramos_alu 		 				                    reg_log    						
+                					                        psw_pro             obs_alu                                             id_usu
+                                                                                psw:alu   		 								
+                                                                                
+
+                crud para profesor  crud para super         crud para admin     crud para profesor  crud para profesor              visor para super y admin
+                visor para todos    edita propio registro   visor para todos    visor para todos    visor para todos                
+                                                            edita propio registro    
+        CODIGO SQL TABLAS        
+
+            -- Tabla para los administradores
+            CREATE TABLE administradores (
+                id_adm INT AUTO_INCREMENT PRIMARY KEY,
+                nombre_adm VARCHAR(100) NOT NULL,
+                cargo_adm VARCHAR(50),
+                tipo_adm VARCHAR(50),
+                correo_adm VARCHAR(100) NOT NULL UNIQUE,  -- Asegurando que el correo sea único
+                psw_adm VARCHAR(255) NOT NULL
+            );
+
+            -- Tabla para los profesores
+            CREATE TABLE profesores (
+                id_pro INT AUTO_INCREMENT PRIMARY KEY,
+                nombre_pro VARCHAR(100) NOT NULL,
+                apellidos_pro VARCHAR(100),
+                rut_pro VARCHAR(20) NOT NULL UNIQUE,  -- Asegurando que el RUT sea único
+                correo_pro VARCHAR(100) NOT NULL UNIQUE,  -- Asegurando que el correo sea único
+                ramos_pro TEXT,
+                psw_pro VARCHAR(255) NOT NULL
+            );
+
+            -- Tabla para los alumnos
+            CREATE TABLE alumnos (
+                id_alu INT AUTO_INCREMENT PRIMARY KEY,
+                nombre_alu VARCHAR(100) NOT NULL,
+                apellidos_alu VARCHAR(100),
+                rut_alu VARCHAR(20) NOT NULL UNIQUE,  -- Asegurando que el RUT sea único
+                correo_alu VARCHAR(100) NOT NULL UNIQUE , -- Asegurando que el correo sea único
+                obs_alu TEXT,
+                psw_alu VARCHAR(255) NOT NULL
+            );
+
+            -- Tabla para los ramos
+            CREATE TABLE ramos (
+               id_ram INT AUTO_INCREMENT PRIMARY KEY,
+                id_pro_ram INT,
+                nombre_ram VARCHAR(100) NOT NULL,
+                FOREIGN KEY (id_pro_ram) REFERENCES profesores(id_pro)
+            );
+
+            -- Tabla para las calificaciones
+            CREATE TABLE calificaciones (
+                id_cal INT AUTO_INCREMENT PRIMARY KEY,
+                id_alu_cal INT NOT NULL,
+                id_ram_cal INT NOT NULL,
+                id_pro_cal INt NOT NULL,
+                notas_ram_cal DECIMAL(5,2) NOT NULL,
+                promedio_ram_cal DECIMAL(5,2),
+                FOREIGN KEY (id_alu) REFERENCES alumnos(id_alu),
+                FOREIGN KEY (id_ram) REFERENCES ramos(id_ram)
+                FOREIGN KEY (id_pro_cal) REFERENCES prefesores(id_pro)
+            );
+
+            -- Tabla para los logs del sistema
+            CREATE TABLE logs (
+                id_log INT AUTO_INCREMENT PRIMARY KEY,
+                id_usu INT,
+                tipo_log VARCHAR(50),
+                fecha_log DATE,
+                hora_ini_log TIME,
+                hora_fin_log TIME,
+                reg_log TEXT
+            );
