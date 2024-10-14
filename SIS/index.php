@@ -1,5 +1,7 @@
 <?php
 //<!-- http://localhost:8080/dashboard/calificaciones/index.php -->
+include_once "libreria.php";
+
 // Iniciar sesión al principio del archivo
 session_start(); 
 
@@ -8,6 +10,15 @@ if (!isset($_SESSION['tipo_usu'])) {
     header('Location: inicio.php'); // Redirigir al inicio si no está autenticado
     exit; // Asegúrate de salir después de la redirección
 }
+// Función para cerrar la sesión
+if (isset($_POST['cerrar_sesion'])) {
+    session_destroy();
+    header('Location: inicio.php');
+    exit();
+}
+// Llamar a la función para verificar el tiempo de sesión (en segundos)
+tiempo_sesion(300); // 300 segundos = 5 minutos
+// tiempo_sesion(50); // 50 segundos 
 ?>
 
 <!DOCTYPE html>
@@ -15,13 +26,14 @@ if (!isset($_SESSION['tipo_usu'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Registro de Calificaciones</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sistema de Calificaciones</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="./index.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Logo del Sistema">
+            <img src="./logo.png" alt="Logo del Sistema">
         </div>
         <nav class="menu">
             <ul>
@@ -50,7 +62,14 @@ if (!isset($_SESSION['tipo_usu'])) {
                 <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Superusuario'): ?>
                     <li><a href="sesion.php">Sesion</a></li>
                 <?php endif; ?>
+                <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Superusuario'): ?>
+                    <li><a href="presenta_reg.php">Registros</a></li>
+                <?php endif; ?>
                 <li><a href="ayuda.php">Ayuda en línea</a></li>
+                     <!-- Botón para cerrar sesión -->
+                <form method="post" action="">
+                    <button type="submit" name="cerrar_sesion">Cerrar Sesión</button>
+                </form>
             </ul>
         </nav>
     </header>

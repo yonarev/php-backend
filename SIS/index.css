@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.menu ul li {
+    position: relative;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu ul li a:hover {
+    background-color: #3e8e41;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+button[name="cerrar_sesion"] {
+    background-color: #d9534f; /* Color de fondo rojo */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Icono de mano cuando se pasa el ratón */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+button[name="cerrar_sesion"]:hover {
+    background-color: #c9302c; /* Color de fondo más oscuro al pasar el ratón */
+}
+
+button[name="cerrar_sesion"]:active {
+    background-color: #ac2925; /* Color de fondo aún más oscuro al hacer clic */
+    transform: scale(0.98); /* Ligera reducción de tamaño para efecto visual */
+}
+
+button[name="cerrar_sesion"]:focus {
+    outline: none; /* Eliminar el borde de enfoque predeterminado del navegador */
+}
+
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .menu ul li a {
+        padding: 10px 0;
+        border-bottom: 1px solid #fff;
+    }
+    .logo img {
+        width: 80px;
+    }
+    button[name="cerrar_sesion"] {
+        width: 100%; /* Hacer que el botón ocupe el ancho completo */
+        padding: 15px; /* Aumentar el padding para mejorar la usabilidad en dispositivos táctiles */
+        font-size: 18px; /* Aumentar ligeramente el tamaño del texto */
+    }
+}

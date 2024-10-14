@@ -126,79 +126,79 @@
 
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administración de Administradores</title>
-    <link rel="stylesheet" href="administra.css"> <!-- Archivo CSS adaptable -->
-    <script>
-        // Función para limpiar el formulario y enfocar el campo nombre
-        function resetForm() {
-            document.getElementById('nombre').value = '';
-            document.getElementById('apellidos').value = '';
-            document.getElementById('correo').value = '';
-            document.getElementById('psw').value = '';
-            document.getElementById('nombre').focus();
-        }
-    </script>
-</head>
-<body>
-    <h1>Administración de Administradores</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Administración de Administradores</title>
+        <link rel="stylesheet" href="administra.css"> <!-- Archivo CSS adaptable -->
+        <script>
+            // Función para limpiar el formulario y enfocar el campo nombre
+            function resetForm() {
+                document.getElementById('nombre').value = '';
+                document.getElementById('apellidos').value = '';
+                document.getElementById('correo').value = '';
+                document.getElementById('psw').value = '';
+                document.getElementById('nombre').focus();
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Administración de Administradores</h1>
 
-    <form method="POST" action="administra.php">
-        <h2><?php echo $id_usu ? "Modificar Administrador" : "Crear Nuevo Administrador"; ?></h2>
-        <input type="hidden" name="accion" value="<?php echo $id_usu ? 'actualizar' : 'crear'; ?>">
-        <input type="hidden" name="id_usu" value="<?php echo $id_usu; ?>">
-        
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre" value="<?php echo htmlspecialchars($nombre); ?>" required>
-        
-        <label for="apellidos">Apellidos:</label>
-        <input type="text" name="apellidos" id="apellidos" value="<?php echo htmlspecialchars($apellidos); ?>" required>
-        
-        <label for="correo">Correo:</label>
-        <input type="email" name="correo" id="correo" value="<?php echo htmlspecialchars($correo); ?>" required>
-        
-        <label for="psw">Contraseña:</label>
-        <input type="password" name="psw" id="psw" placeholder="Dejar en blanco si no desea cambiarla">
-        
-        <button class="btn_modifica" type="submit"><?php echo $id_usu ? "Grabar Cambios" : "Grabar Nuevo Administrador"; ?></button>
-    </form>
+        <form method="POST" action="administra.php">
+            <h2><?php echo $id_usu ? "Modificar Administrador" : "Crear Nuevo Administrador"; ?></h2>
+            <input type="hidden" name="accion" value="<?php echo $id_usu ? 'actualizar' : 'crear'; ?>">
+            <input type="hidden" name="id_usu" value="<?php echo $id_usu; ?>">
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" value="<?php echo htmlspecialchars($nombre); ?>" required>
+            
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" id="apellidos" value="<?php echo htmlspecialchars($apellidos); ?>" required>
+            
+            <label for="correo">Correo:</label>
+            <input type="email" name="correo" id="correo" value="<?php echo htmlspecialchars($correo); ?>" required>
+            
+            <label for="psw">Contraseña:</label>
+            <input type="password" name="psw" id="psw" placeholder="Dejar en blanco si no desea cambiarla">
+            
+            <button class="btn_modifica" type="submit"><?php echo $id_usu ? "Grabar Cambios" : "Grabar Nuevo Administrador"; ?></button>
+        </form>
 
-    <h2>Administradores Existentes</h2>
-    <table border="1">
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Apellidos</th>
-            <th>Correo</th>
-            <th>Acciones</th>
-        </tr>
-        <?php foreach ($administradores as $admin): ?>
-        <tr>
-            <td><?php echo htmlspecialchars($admin['id_usu']); ?></td>
-            <td><?php echo htmlspecialchars($admin['nombre']); ?></td>
-            <td><?php echo htmlspecialchars($admin['apellidos']); ?></td>
-            <td><?php echo htmlspecialchars($admin['correo']); ?></td>
-            <td>
-                <!-- Botón para cargar datos en el formulario -->
-                <form method="POST" action="administra.php" style="display:inline;">
-                    <input type="hidden" name="accion" value="modificar">
-                    <input type="hidden" name="id_usu" value="<?php echo htmlspecialchars($admin['id_usu']); ?>">
-                    <input type="hidden" name="nombre" value="<?php echo htmlspecialchars($admin['nombre']); ?>">
-                    <input type="hidden" name="apellidos" value="<?php echo htmlspecialchars($admin['apellidos']); ?>">
-                    <input type="hidden" name="correo" value="<?php echo htmlspecialchars($admin['correo']); ?>">
-                    <button class="btn_modifica" type="submit">Modificar</button>
-                </form>
-                <!-- Formulario para eliminar -->
-                <form method="POST" action="administra.php" style="display:inline;">
-                    <input class="btn-eliminar" type="hidden" name="accion" value="eliminar">
-                    <input type="hidden" name="id_usu" value="<?php echo htmlspecialchars($admin['id_usu']); ?>">
-                    <button class="btn-eliminar" type="submit" onclick="return confirm('¿Estás seguro de que deseas eliminar este administrador?');">Eliminar</button>
-                </form>
-            </td>
-        </tr> 
-        <?php endforeach; ?>
-    </table>
-</body>
+        <h2>Administradores Existentes</h2>
+        <table border="1">
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Correo</th>
+                <th>Acciones</th>
+            </tr>
+            <?php foreach ($administradores as $admin): ?>
+            <tr>
+                <td><?php echo htmlspecialchars($admin['id_usu']); ?></td>
+                <td><?php echo htmlspecialchars($admin['nombre']); ?></td>
+                <td><?php echo htmlspecialchars($admin['apellidos']); ?></td>
+                <td><?php echo htmlspecialchars($admin['correo']); ?></td>
+                <td>
+                    <!-- Botón para cargar datos en el formulario -->
+                    <form method="POST" action="administra.php" style="display:inline;">
+                        <input type="hidden" name="accion" value="modificar">
+                        <input type="hidden" name="id_usu" value="<?php echo htmlspecialchars($admin['id_usu']); ?>">
+                        <input type="hidden" name="nombre" value="<?php echo htmlspecialchars($admin['nombre']); ?>">
+                        <input type="hidden" name="apellidos" value="<?php echo htmlspecialchars($admin['apellidos']); ?>">
+                        <input type="hidden" name="correo" value="<?php echo htmlspecialchars($admin['correo']); ?>">
+                        <button class="btn_modifica" type="submit">Modificar</button>
+                    </form>
+                    <!-- Formulario para eliminar -->
+                    <form method="POST" action="administra.php" style="display:inline;">
+                        <input class="btn-eliminar" type="hidden" name="accion" value="eliminar">
+                        <input type="hidden" name="id_usu" value="<?php echo htmlspecialchars($admin['id_usu']); ?>">
+                        <button class="btn-eliminar" type="submit" onclick="return confirm('¿Estás seguro de que deseas eliminar este administrador?');">Eliminar</button>
+                    </form>
+                </td>
+            </tr> 
+            <?php endforeach; ?>
+        </table>
+    </body>
 </html>

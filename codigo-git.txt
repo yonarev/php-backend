@@ -57,7 +57,15 @@ jvv@pcwin10PRO MINGW64 ~/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/PHP-BACK-END-cap
         Your branch is up to date with 'origin/main'.
 
         nothing to commit, working tree clean
-13/10/2024 20_56 
-git add .
-git commit -m "2 - edicion index.html, administra.php, registro.php, sesion.php"
-git push -u origin main
+ACTUALIZA GIT HUB
+    13/10/2024 20:56 
+    git add .
+    git commit -m "2 - edicion index.html, administra.php, registro.php, sesion.php"
+    git push -u origin main
+-----
+ACTUALIZA GIT HUB
+    134/10/2024 18:26
+    git add .
+    git commit -m "3 editando sesion de superadmin y cerrando sesion..se creo presenta_reg.php ver proceso.txt "
+    git push -u origin main
+-----

@@ -70,6 +70,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
+    <link rel="shortcut icon" href="./inicio.ico" type="image/x-icon">
+
     <style>
         /* Estilos sencillos para una página adaptable */
         body {
@@ -80,6 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             height: 100vh;
             margin: 0;
             background-color: #f4f4f4;
+            display: flex;
         }
         .login-container {
             background-color: white;
@@ -89,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             max-width: 400px;
             width: 100%;
         }
-        h1 {
+        h1,h3 {
             text-align: center;
             margin-bottom: 20px;
         }
@@ -120,11 +123,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             color: red;
             margin-bottom: 15px;
         }
+        .logo {
+            text-align: center; /* Centrar el contenido dentro de la sección */
+        }
+        .logo img {
+            width: 80px;
+            margin: 0 auto; /* Centrar la imagen horizontalmente */
+        }
     </style>
 </head>
 <body>
     <div class="login-container">
         <h1>Iniciar Sesión</h1>
+        <h3>Sistema de Calificaciones</h3>
+        <div class="logo">
+            <img src="./logo.png" alt="Logo del Sistema">
+        </div>
         <?php
         if (isset($error)) {
             echo "<p class='error'>$error</p>"; // Mostrar mensaje de error
