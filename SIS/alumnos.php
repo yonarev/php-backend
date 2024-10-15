@@ -1,25 +1,25 @@
 <?php
-    //<!-- http://localhost:8080/dashboard/profesores.php -->
+    //  http://localhost:8080/dashboard/alumnos.php 
+
     // Incluimos el archivo de conexión a la base de datos y el registro de logs
     include_once 'conecta.php'; 
     include_once 'registro.php';
-    // Verificamos si el usuario tiene permisos de superusuario antes de mostrar el contenido
+    
+    // Verificamos si el usuario tiene permisos de profesor antes de mostrar el contenido
     session_start();
-    if (!isset($_SESSION['tipo_usu']) || $_SESSION['tipo_usu'] == 'Superusuario') {
+    if (!isset($_SESSION['tipo_usu']) || $_SESSION['tipo_usu'] != 'Profesor') {
         echo "No tienes permisos para acceder a esta página.";
         exit;
     }
-    //el alumno no tiene el permiso
-    if (!isset($_SESSION['tipo_usu']) || $_SESSION['tipo_usu'] == 'Alumno') {
-        echo "No tienes permisos para acceder a esta página.";
-        exit;
-    }
+
     // Conectamos a la base de datos
     $conexion = conectar_bd();
-    // Inicializamos las variables para el formulario
-    $id_usu = $nombre = $apellidos = $correo = '';
     $id_activo = id_sesion();
     $id_tipo = tipo_sesion();
+
+    // Inicializamos las variables para el formulario
+    $id_usu = $nombre = $apellidos = $correo = '';
+
     // Cargar datos si se solicita modificar
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['accion']) && $_POST['accion'] == 'modificar') {
         $id_usu = $_POST['id_usu'];
@@ -27,7 +27,8 @@
         $apellidos = $_POST['apellidos'];
         $correo = $_POST['correo'];
     }
-    // Crear un nuevo profesor
+
+    // Crear un nuevo alumno
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['accion']) && $_POST['accion'] == 'crear') {
         $nombre = $_POST['nombre'];
         $apellidos = $_POST['apellidos'];
@@ -35,96 +36,110 @@
         $psw = password_hash($_POST['psw'], PASSWORD_DEFAULT);
 
         try {
-            $query = "INSERT INTO usuarios (tipo_usu, nombre, apellidos, correo, psw) VALUES ('Profesor', :nombre, :apellidos, :correo, :psw)";
+            $query = "INSERT INTO usuarios (tipo_usu, nombre, apellidos, correo, psw) VALUES ('Alumno', :nombre, :apellidos, :correo, :psw)";
             $stmt = $conexion->prepare($query);
             $stmt->bindParam(':nombre', $nombre);
             $stmt->bindParam(':apellidos', $apellidos);
             $stmt->bindParam(':correo', $correo);
             $stmt->bindParam(':psw', $psw);
             $stmt->execute();
-            echo "Profesor creado correctamente.";
+            echo "Alumno creado correctamente.";
 
             // Registro de log
-            $reg_log = "Ingresó el profesor con correo: " . $correo;
-            registrar("usuarios", $id_activo, $id_tipo, $reg_log);
+            $reg_log = "Ingresó el alumno con correo: " . $correo;
+            registrar("usuarios", $id_activo, 'Alumno', $reg_log);
 
             // Reiniciar los campos del formulario
             $id_usu = $nombre = $apellidos = $correo = '';
             echo "<script>resetForm();</script>";
         } catch (PDOException $e) {
-            echo "Error al crear profesor: " . $e->getMessage();
+            echo "Error al crear alumno: " . $e->getMessage();
         }
     }
-    // Actualizar un profesor
+    // Actualizar datos de un alumno
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['accion']) && $_POST['accion'] == 'actualizar') {
         $id_usu = $_POST['id_usu'];
         $nombre = $_POST['nombre'];
         $apellidos = $_POST['apellidos'];
         $correo = $_POST['correo'];
-        $psw = isset($_POST['psw']) && !empty($_POST['psw']) ? password_hash($_POST['psw'], PASSWORD_DEFAULT) : null;
+        $psw = $_POST['psw'];
 
         try {
-            if ($psw) {
-                $query = "UPDATE usuarios SET nombre = :nombre, apellidos = :apellidos, correo = :correo, psw = :psw WHERE id_usu = :id_usu AND tipo_usu = 'Profesor'";
+            // Verificamos si se ha proporcionado una nueva contraseña
+            if (!empty($psw)) {
+                $psw = password_hash($psw, PASSWORD_DEFAULT);
+                $query = "UPDATE usuarios SET nombre = :nombre, apellidos = :apellidos, correo = :correo, psw = :psw WHERE id_usu = :id_usu AND tipo_usu = 'Alumno'";
                 $stmt = $conexion->prepare($query);
                 $stmt->bindParam(':psw', $psw);
             } else {
-                $query = "UPDATE usuarios SET nombre = :nombre, apellidos = :apellidos, correo = :correo WHERE id_usu = :id_usu AND tipo_usu = 'Profesor'";
+                // Si no se ha cambiado la contraseña, omitimos ese campo
+                $query = "UPDATE usuarios SET nombre = :nombre, apellidos = :apellidos, correo = :correo WHERE id_usu = :id_usu AND tipo_usu = 'Alumno'";
                 $stmt = $conexion->prepare($query);
             }
-            // Luego de preparar la consulta, enlazamos los otros parámetros
             $stmt->bindParam(':nombre', $nombre);
             $stmt->bindParam(':apellidos', $apellidos);
             $stmt->bindParam(':correo', $correo);
             $stmt->bindParam(':id_usu', $id_usu);
-            
-            // Ejecutar la consulta
             $stmt->execute();
-            echo "Profesor actualizado correctamente.";
+
+            echo "Alumno actualizado correctamente.";
 
             // Registro de log
-            $reg_log = "Se actualizó el profesor con ID: " . strval($id_usu) . " Nombre y apellido: " . $nombre . " " . $apellidos . " Correo: " . $correo;
-            registrar("usuarios", $id_activo, $id_tipo, $reg_log);
+            $reg_log ="Se actualizó el alumno con ID: " . strval($id_usu) . " Nombre y apellido: " . $nombre . " " . $apellidos . " Correo: " . $correo;
+            registrar("usuarios", $id_activo, 'Profesor', $reg_log);
 
             // Reiniciar los campos del formulario
             $id_usu = $nombre = $apellidos = $correo = '';
             echo "<script>resetForm();</script>";
         } catch (PDOException $e) {
-            echo "Error al actualizar profesor: " . $e->getMessage();
+            echo "Error al actualizar alumno: " . $e->getMessage();
         }
     }
-    // Eliminar un profesor
+
+    // Eliminar un alumno
     if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['accion']) && $_POST['accion'] == 'eliminar') {
         $id_usu = $_POST['id_usu'];
-
+        
+        // Mensaje de depuración
+        echo "Intentando eliminar el alumno con id: " . $id_usu;
+    
         try {
-            $query = "DELETE FROM usuarios WHERE id_usu = :id_usu AND tipo_usu = 'Profesor'";
+            // Eliminar el alumno de la base de datos
+            $query = "DELETE FROM usuarios WHERE id_usu = :id_usu AND tipo_usu = 'Alumno'";
             $stmt = $conexion->prepare($query);
             $stmt->bindParam(':id_usu', $id_usu);
-            $stmt->execute();
-            echo "Profesor eliminado correctamente.";
-
+    
+            // Para verificar si el alumno es eliminado correctamente
+            if ($stmt->execute()) {
+                echo "Alumno eliminado correctamente.";
+            } else {
+                echo "Error al ejecutar la eliminación.";
+            }
+    
             // Registro de log
-            $reg_log = "Se eliminó el profesor con ID: " . strval($id_usu);
-            registrar("usuarios", $id_activo, $id_tipo, $reg_log);
+            $reg_log = "Eliminó el alumno con id: " . $id_usu;
+            registrar("usuarios", $id_activo, 'Alumno', $reg_log);
+            
         } catch (PDOException $e) {
-            echo "Error al eliminar profesor: " . $e->getMessage();
+            echo "Error al eliminar alumno: " . $e->getMessage();
         }
     }
-    // Función para obtener profesores existentes
-    function obtenerProfesores($conexion) {
+    
+    // Función para obtener alumnos existentes
+    function obtenerAlumnos($conexion) {
         try {
-            $query = "SELECT id_usu, nombre, apellidos, correo FROM usuarios WHERE tipo_usu = 'Profesor'";
+            $query = "SELECT id_usu, nombre, apellidos, correo FROM usuarios WHERE tipo_usu = 'Alumno'";
             $stmt = $conexion->prepare($query);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {
-            echo "Error al obtener profesores: " . $e->getMessage();
+            echo "Error al obtener alumnos: " . $e->getMessage();
             return [];
         }
     }
-    // Obtener la lista de profesores después de cada acción
-    $profesores = obtenerProfesores($conexion);
+
+    // Obtener la lista de alumnos después de cada acción
+    $alumnos = obtenerAlumnos($conexion);
 ?>
 
 <!DOCTYPE html>
@@ -132,8 +147,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Administración de Profesores</title>
-        <link rel="stylesheet" href="./profesores.css"> <!-- Archivo CSS adaptable -->
+        <title>Administración de Alumnos</title>
+        <link rel="stylesheet" href="./alumnos.css"> <!-- Archivo CSS adaptable -->
         <script>
             // Función para limpiar el formulario y enfocar el campo nombre
             function resetForm() {
@@ -146,17 +161,17 @@
         </script>
     </head>
     <body>
-        <div class="header-profesores">
+        <div class="header-alumnos">
             <div class="logo">
                 <a href="index.php">
                     <img src="./logo.png" alt="Logo del Sistema">
                 </a>
             </div>    
-            <h1>Administración de Profesores</h1>
+            <h1>Administración de Alumnos</h1>
         </div>
 
-        <form method="POST" action="profesores.php">
-            <h2><?php echo $id_usu ? "Modificar Profesor" : "Crear Nuevo Profesor"; ?></h2>
+        <form method="POST" action="alumnos.php">
+            <h2><?php echo $id_usu ? "Modificar Alumno" : "Crear Nuevo Alumno"; ?></h2>
             <input type="hidden" name="accion" value="<?php echo $id_usu ? 'actualizar' : 'crear'; ?>">
             <input type="hidden" name="id_usu" value="<?php echo $id_usu; ?>">
 
@@ -172,10 +187,10 @@
             <label for="psw">Contraseña:</label>
             <input type="password" name="psw" id="psw" placeholder="Dejar en blanco si no desea cambiarla">
 
-            <button class="btn_modifica" type="submit"><?php echo $id_usu ? "Grabar Cambios" : "Grabar Nuevo Profesor"; ?></button>
+            <button class="btn_modifica" type="submit"><?php echo $id_usu ? "Grabar Cambios" : "Grabar Nuevo Alumno"; ?></button>
         </form>
 
-        <h2>Profesores Existentes</h2>
+        <h2>Alumnos Existentes</h2>
         <table border="1">
             <tr>
                 <th>ID</th>
@@ -184,29 +199,30 @@
                 <th>Correo</th>
                 <th>Acciones</th>
             </tr>
-            <?php foreach ($profesores as $prof): ?>
+            <?php foreach ($alumnos as $alu): ?>
                 <tr>
-                    <td><?php echo htmlspecialchars($prof['id_usu']); ?></td>
-                    <td><?php echo htmlspecialchars($prof['nombre']); ?></td>
-                    <td><?php echo htmlspecialchars($prof['apellidos']); ?></td>
-                    <td><?php echo htmlspecialchars($prof['correo']); ?></td>
+                    <td><?php echo htmlspecialchars($alu['id_usu']); ?></td>
+                    <td><?php echo htmlspecialchars($alu['nombre']); ?></td>
+                    <td><?php echo htmlspecialchars($alu['apellidos']); ?></td>
+                    <td><?php echo htmlspecialchars($alu['correo']); ?></td>
                     <td>
                         <form method="POST" style="display:inline;">
-                            <input type="hidden" name="id_usu" value="<?php echo $prof['id_usu']; ?>">
-                            <input type="hidden" name="nombre" value="<?php echo htmlspecialchars($prof['nombre']); ?>">
-                            <input type="hidden" name="apellidos" value="<?php echo htmlspecialchars($prof['apellidos']); ?>">
-                            <input type="hidden" name="correo" value="<?php echo htmlspecialchars($prof['correo']); ?>">
+                            <input type="hidden" name="id_usu" value="<?php echo $alu['id_usu']; ?>">
+                            <input type="hidden" name="nombre" value="<?php echo htmlspecialchars($alu['nombre']); ?>">
+                            <input type="hidden" name="apellidos" value="<?php echo htmlspecialchars($alu['apellidos']); ?>">
+                            <input type="hidden" name="correo" value="<?php echo htmlspecialchars($alu['correo']); ?>">
                             <input type="hidden" name="accion" value="modificar">
                             <button type="submit">Modificar</button>
                         </form>
                         <form method="POST" style="display:inline;">
-                            <input type="hidden" name="id_usu" value="<?php echo $prof['id_usu']; ?>">
+                            <input type="hidden" name="id_usu" value="<?php echo $alu['id_usu']; ?>">
                             <input type="hidden" name="accion" value="eliminar">
-                            <button type="submit" class="btn-eliminar" onclick="return confirm('¿Estás seguro de que deseas eliminar este profesor?');">Eliminar</button>
+                            <button type="submit" class="btn-eliminar" onclick="return confirm('¿Estás seguro de que deseas eliminar este alumno?');">Eliminar</button>
                         </form>
+
                     </td>
                 </tr>
             <?php endforeach; ?>
-    </table>
+        </table>
     </body>
 </html>

@@ -1,15 +1,13 @@
 <?php
     include_once "registro.php";
-    //  http://localhost:8080/dashboard/calificaciones/sesion.php
+    //  http://localhost:8080/dashboard/sesion.php
     session_start(); // Iniciar la sesión
-
     // Verificar si se solicitó borrar la sesión
     if (isset($_POST['borrar_sesion'])) {
         session_destroy(); // Destruir la sesión
         header("Location: sesion.php"); // Redirigir a la misma página
         exit();
     }
-
     // Verificar si hay datos en la sesión
     if (empty($_SESSION)) {
         echo "<h1>No hay datos en la sesión.</h1>";

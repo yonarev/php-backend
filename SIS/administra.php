@@ -1,5 +1,5 @@
 <?php
-    // http://localhost:8080/dashboard/calificaciones/administra.php
+    // http://localhost:8080/dashboard/administra.php
     // Incluimos el archivo de conexión a la base de datos
     include_once 'conecta.php';
     include_once 'registro.php';

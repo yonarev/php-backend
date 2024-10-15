@@ -3,7 +3,7 @@ import shutil
 import os
 
 source_dir = 'C:/Users/notebook/Documents/janvera/ARCHIVOSLAB/ESTUDIOS/PHP-BACK-END-capacitate/SIS'
-destination_dir = 'C:/xampp/htdocs/dashboard/calificaciones'
+destination_dir = 'C:/xampp/htdocs/dashboard'
 
 for filename in os.listdir(source_dir):
     file_path = os.path.join(source_dir, filename)

@@ -40,3 +40,27 @@ INGRESAR COMO administrador
     GENERAR CRUD profesores.php
         falta mejorar css 
         y revisar ejecucion
+PRUEBAS ACTUALIZACION ngrok 
+    servidor xampp pto 8080
+    se conecta ngrock pto 8080
+    se comparte el vinculo
+    click en el celular
+    actualizaciones en celular ok
+    actualizaciones en pc ok 
+CREACION CRUD ALUMNOS 
+    para crear alumnos lo hace un profesor 
+        alumnos.php
+    DARLE ACCESO AL PROFESOR AL SISTEMA
+        inicio.php
+        index.php
+    VALIDACIONES EN 
+        sesion y registro
+    VALIDACIONES PROFESORES GRABAN ALUMNOS 
+        nuevo ok 
+        edicion ok 
+        elimnia ok
+STOP DEPURACION DE CODIGO 
+    revision detalles y luego continuar con 
+    profesor crud ramos
+    
+    

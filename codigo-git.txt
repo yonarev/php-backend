@@ -70,9 +70,15 @@ ACTUALIZA GIT HUB //ok
     git push -u origin main
 -----
 ACTUALIZA GIT HUB //ok
-    134/10/2024 2150
+    13¿4/10/2024 2150
     git add .
     git commit -m "4 editando administra profesores ver proceso.txt "
+    git push -u origin main
+-----
+ACTUALIZA GIT HUB //ok
+    15/10/2024 1642
+    git add .
+    git commit -m "5 crud alumnos por profesor ver proceso.txt "
     git push -u origin main
 -----
 

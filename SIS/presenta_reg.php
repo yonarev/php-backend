@@ -1,6 +1,5 @@
 <?php
-// http://localhost:8080/dashboard/calificaciones/presenta_reg.php
-
+// http://localhost:8080/dashboard/presenta_reg.php
 
 // Incluir archivo de conexión
 include 'conecta.php';
@@ -11,35 +10,36 @@ $conexion = conectar_bd();
 // Consultar los registros de la tabla logs junto con los correos de la tabla usuarios
 $query = "SELECT l.id_log, l.id_usu, l.tipo_log, l.fecha_log, l.hora_ini_log, l.reg_log, u.correo
           FROM logs l
-          JOIN usuarios u ON l.id_usu = u.id_usu";
+          JOIN usuarios u ON l.id_usu = u.id_usu
+          ORDER BY l.fecha_log DESC, l.hora_ini_log DESC"; // Ordenar por fecha y hora
+
 $stmt = $conexion->prepare($query);
 $stmt->execute();
 $logs = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Registros de Logs</title>
-        <style>
-            table {
-                width: 100%;
-                border-collapse: collapse;
-            }
-            table, th, td {
-                border: 1px solid black;
-            }
-            th, td {
-                padding: 8px;
-                text-align: left;
-            }
-            th {
-                background-color: #f2f2f2;
-            }
-            </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros de Logs</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
     <h1>Registros de Logs</h1>
@@ -75,4 +75,3 @@ $logs = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </table>
 </body>
 </html>
-

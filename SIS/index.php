@@ -1,5 +1,5 @@
 <?php
-//<!-- http://localhost:8080/dashboard/calificaciones/index.php -->
+//<!-- http://localhost:8080/dashboard/index.php -->
 include_once "libreria.php";
 
 // Iniciar sesión al principio del archivo
@@ -38,35 +38,43 @@ tiempo_sesion(300); // 300 segundos = 5 minutos
         <nav class="menu">
             <ul>
                 <li><a href="inicio.php">Inicio</a></li>
-
+                <!-- SOLO EL SUPERUSUARIO CREA ADMINISTRADORES -->
                 <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Superusuario'): ?>
                     <li><a href="administra.php">Administrar</a></li>
                 <?php endif; ?>
-                <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Administrador'): ?>
-                    <li><a href="permisos.php">Permisos</a></li>
-                <?php endif; ?>
+                <!-- SOLO EL ADMINISTRADOR CREA PROFESORES -->
                 <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Administrador'): ?>
                     <li><a href="profesores.php">Profesores</a></li>
                 <?php endif; ?>
-                <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Alumno'): ?>
+                <!-- SOLO PROFESOR CREA Y EDITA ALUMNOS -->
+                <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Profesor'): ?>
                     <li><a href="alumnos.php">Alumnos</a></li>
                 <?php endif; ?>
+                <!-- EL ALUMNOS SOLO PUEDE VER SU REGISTRO -->
+                <!-- <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Alumno'): ?>
+                    <li><a href="alumnos.php">Alumnos</a></li>
+                <?php endif; ?> -->
                 <!-- <li><a href="profesores.php">Profesores</a></li> -->
                 <!-- <li><a href="alumnos.php">Alumnos</a></li> -->
+
+                <!-- SI ES PROFESOR INGRESA EDITA CALIFICACIONES -->
                 <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Profesor'): ?>
                     <li><a href="calificaciones.php">Calificaciones</a></li>
                 <?php endif; ?>
+                <!-- TODOS PUEDEN VER CALIFICACIONES -->
                 <li><a href="ver_calificaciones.php">Ver Calificaciones</a></li>
                 <!-- <li><a href="calificaciones.php">Calificaciones</a></li> -->
                 <li><a href="registro.php">Registro</a></li>
+                <!-- SOLO EL SUPERUSUARIO VE SESION -->
                 <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Superusuario'): ?>
                     <li><a href="sesion.php">Sesion</a></li>
                 <?php endif; ?>
+                <!-- SOLO SUPERUSUARIO VE EL REGISTRO -->
                 <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Superusuario'): ?>
                     <li><a href="presenta_reg.php">Registros</a></li>
                 <?php endif; ?>
                 <li><a href="ayuda.php">Ayuda en línea</a></li>
-                     <!-- Botón para cerrar sesión -->
+                <!-- Botón para cerrar sesión -->
                 <form method="post" action="">
                     <button type="submit" name="cerrar_sesion">Cerrar Sesión</button>
                 </form>

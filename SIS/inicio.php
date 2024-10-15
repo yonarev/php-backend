@@ -1,5 +1,5 @@
 <?php
-//  http://localhost:8080/dashboard/calificaciones/inicio.php 
+//  http://localhost:8080/dashboard/inicio.php 
 // Iniciamos la sesión para gestionar los inicios de sesión
 session_start();
 
@@ -35,15 +35,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     header('Location: index.php'); // Redirigir a index.php para el superusuario
                 } elseif ($usuario['tipo_usu'] == 'Administrador') {
                     header('Location: index.php'); // Redirigir a admin.php para el administrador
+                } elseif ($usuario['tipo_usu'] == 'Profesor') {
+                    header('Location: index.php'); // Redirigir a admin.php para el administrador
             } else {
                 // Redirige según el tipo de usuario
                 switch ($usuario['tipo_usu']) {
                     // case 'Administrador':
                     //     header('Location: index.php'); // Redirigir a index.php para el administrador
                     //     break;
-                    case 'Profesor':
-                        header('Location: profesor.php');
-                        break;
+                    // case 'Profesor':
+                    //     header('Location: profesor.php');
+                    //     break;
                     case 'Alumno':
                         header('Location: alumno.php');
                         break;
