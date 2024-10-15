@@ -32,13 +32,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             // Redirigimos al usuario según su tipo
             if ($usuario['tipo_usu'] == 'Superusuario') {
-                header('Location: index.php'); // Redirigir a index.php para el superusuario
+                    header('Location: index.php'); // Redirigir a index.php para el superusuario
+                } elseif ($usuario['tipo_usu'] == 'Administrador') {
+                    header('Location: index.php'); // Redirigir a admin.php para el administrador
             } else {
                 // Redirige según el tipo de usuario
                 switch ($usuario['tipo_usu']) {
-                    case 'Administrador':
-                        header('Location: administra.php');
-                        break;
+                    // case 'Administrador':
+                    //     header('Location: index.php'); // Redirigir a index.php para el administrador
+                    //     break;
                     case 'Profesor':
                         header('Location: profesor.php');
                         break;

@@ -143,8 +143,14 @@
         </script>
     </head>
     <body>
-        <h1>Administración de Administradores</h1>
-
+        <div class="header-admin">
+            <div class="logo">
+                <a href="index.php">
+                    <img src="./logo.png" alt="Logo del Sistema">
+                </a>
+            </div>    
+            <h1>Administración de Administradores</h1>
+        </div>
         <form method="POST" action="administra.php">
             <h2><?php echo $id_usu ? "Modificar Administrador" : "Crear Nuevo Administrador"; ?></h2>
             <input type="hidden" name="accion" value="<?php echo $id_usu ? 'actualizar' : 'crear'; ?>">

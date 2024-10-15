@@ -1,36 +1,42 @@
 
-INCONGUENCIA FECHA EN registro.php /resuelto
-       // Configurar la zona horaria para Chile
-        date_default_timezone_set('America/Santiago'); // Cambiado a la zona horaria de Chile
-GENERACION DE VISUALIZACION DE REGISTRO
-    presenta_reg.php
-    se creo en index.php menu / Registro
-        para acceder a presenta_reg.php
-PROGRAMAR CERRAR SESION USUARIO  
-    EN sesion.php INCORPORO BOTON cerra sesion
-        // Verificar si se solicitó borrar la sesión
-        if (isset($_POST['borrar_sesion'])) {
-            session_destroy(); // Destruir la sesión
-            header("Location: sesion.php"); // Redirigir a la misma página
-            exit();
-        }
-        // Formulario para cerrar y borrar la sesión
-            echo '<form method="post" action="">
-                    <button type="submit" name="borrar_sesion">Cerrar Sesión</button>
-                </form>';
-    EN index.php INCORPORO BOTON cerra sesion
-        // Función para cerrar la sesión
-        if (isset($_POST['cerrar_sesion'])) {
-            session_destroy();
-            header('Location: inicio.php');
-            exit();
-        }
-    se creo libreria.php CON FUNCION tiempo_sesion
-        funcion tiempo_sesion($tiempo) 
-        para darle un tiempo a la sesion del usuario 
-        en index.php 
-            include_once "libreria.php";
-            tiempo_sesion(300); // 300 segundos = 5 minutos
-PROGRAMAR SESION DE ADMINISTRADOR 
-    COMO ADMINISTRADOR CRUD ALUMNO 
-
+ingresando como super
+    INCONGUENCIA FECHA EN registro.php /resuelto
+        // Configurar la zona horaria para Chile
+            date_default_timezone_set('America/Santiago'); // Cambiado a la zona horaria de Chile
+    GENERACION DE VISUALIZACION DE REGISTRO
+        presenta_reg.php
+        se creo en index.php menu / Registro
+            para acceder a presenta_reg.php
+    PROGRAMAR CERRAR SESION USUARIO  
+        EN sesion.php INCORPORO BOTON cerra sesion
+            // Verificar si se solicitó borrar la sesión
+            if (isset($_POST['borrar_sesion'])) {
+                session_destroy(); // Destruir la sesión
+                header("Location: sesion.php"); // Redirigir a la misma página
+                exit();
+            }
+            // Formulario para cerrar y borrar la sesión
+                echo '<form method="post" action="">
+                        <button type="submit" name="borrar_sesion">Cerrar Sesión</button>
+                    </form>';
+        EN index.php INCORPORO BOTON cerra sesion
+            // Función para cerrar la sesión
+            if (isset($_POST['cerrar_sesion'])) {
+                session_destroy();
+                header('Location: inicio.php');
+                exit();
+            }
+        se creo libreria.php CON FUNCION tiempo_sesion
+            funcion tiempo_sesion($tiempo) 
+            para darle un tiempo a la sesion del usuario 
+            en index.php 
+                include_once "libreria.php";
+                tiempo_sesion(300); // 300 segundos = 5 minutos
+    PROGRAMAR SESION DE ADMINISTRADOR 
+        COMO ADMINISTRADOR CRUD ALUMNO 
+    EN administra.php icono para volver a index.php
+INGRESAR COMO administrador 
+    PERMITE activando en menu profesores.php 
+    GENERAR CRUD profesores.php
+        falta mejorar css 
+        y revisar ejecucion

@@ -107,3 +107,27 @@ tr:hover {
     color: red;
     font-weight: bold;
 }
+.header-admin {
+    position: relative; /* Para poder usar posicionamiento en los elementos hijos */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Alinea verticalmente el contenido */
+    padding: 10px;
+}
+
+.header-admin .logo {
+    position: absolute;
+    left: 10px; /* Alinea el logo a la izquierda */
+}
+
+.header-admin .logo img {
+    width: 80px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+.header-admin h1 {
+    margin: 0;
+    font-size: 24px; /* Ajusta el tamaño de la fuente */
+    text-align: center;
+    width: 100%; /* Asegura que el título ocupe todo el ancho disponible */
+}
+
