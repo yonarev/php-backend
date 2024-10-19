@@ -2560,4 +2560,8 @@ Gestión y almacenamiento de información
     akiles
         https://capacitateparaelempleo.org/cursos/view/121
                 
-                
+Pruebas de funcionamiento
+Identifica las etapas del proceso y los pasos a seguir para realizar Pruebas de funcionamiento en el sistema           
+    funcionalidades
+    PLAN DE PRUEBAS 
+        Jerarquia de importancias

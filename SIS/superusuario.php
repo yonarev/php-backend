@@ -1,5 +1,5 @@
 <?php
-//http://localhost:8080/dashboard/calificaciones/superusuario.php
+//http://localhost:8080/dashboard/superusuario.php
 // Incluimos el archivo de conexión a la base de datos
 include 'conecta.php';
 

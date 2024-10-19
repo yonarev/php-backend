@@ -103,7 +103,8 @@
             $reg_log="se elimino el administrador con id: ". strval($id_usu);
             registrar("usuarios", $id_activo, $id_tipo, $reg_log);
         } catch (PDOException $e) {
-            echo "Error al eliminar administrador: " . $e->getMessage();
+            // echo "Error al eliminar administrador: " . $e->getMessage();
+            echo "No es posible eliminar administradores: " ;
         }
     }
 

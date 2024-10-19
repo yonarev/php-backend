@@ -159,6 +159,8 @@ Una  escuela  requiere  de  un  sistema  para  el  registro  de  calificaciones.
                 nombre_ram VARCHAR(100) NOT NULL,
                 FOREIGN KEY (id_pro_ram) REFERENCES usuarios(id_usu) -- Referencia al profesor
             );
+            ALTER TABLE ramos DROP KEY `id_pro_ram`;
+            ALTER TABLE ramos MODIFY COLUMN id_pro_ram INT(11) NOT NULL;
 
             -- Tabla para las calificaciones
             CREATE TABLE calificaciones (

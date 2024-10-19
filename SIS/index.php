@@ -46,6 +46,10 @@ tiempo_sesion(300); // 300 segundos = 5 minutos
                 <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Administrador'): ?>
                     <li><a href="profesores.php">Profesores</a></li>
                 <?php endif; ?>
+                 <!-- SOLO PROFESOR CREA Y EDITA RAMOS -->
+                <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Profesor'): ?>
+                    <li><a href="ramos.php">Ramos</a></li>
+                <?php endif; ?>
                 <!-- SOLO PROFESOR CREA Y EDITA ALUMNOS -->
                 <?php if (isset($_SESSION['tipo_usu']) && $_SESSION['tipo_usu'] == 'Profesor'): ?>
                     <li><a href="alumnos.php">Alumnos</a></li>

@@ -78,7 +78,14 @@ ACTUALIZA GIT HUB //ok
 ACTUALIZA GIT HUB //ok
     15/10/2024 1642
     git add .
-    git commit -m "5 crud alumnos por profesor ver proceso.txt "
-    git push -u origin main
+    git commit -m "5 crud alumnos por profesor ver proceso.txt"
+    git push -u origin main //falla cuando conectado con wifi biblioredes
 -----
+ACTUALIZA GIT HUB //ok
+    19/10/2024 1319
+    git add .
+    git commit -m "5 crud alumnos por profesor ver proceso.txt"
+    git push -u origin main //falla cuando conectado con wifi biblioredes
+-----
+
 

@@ -62,5 +62,27 @@ CREACION CRUD ALUMNOS
 STOP DEPURACION DE CODIGO 
     revision detalles y luego continuar con 
     profesor crud ramos
-    
-    
+    REVISION conecta.php php 
+    REEDICION
+        creacion de config.php
+            aqui cfg para acceso a la bd 
+
+        set enviroment "development" 
+            al pasar a produccion es production 
+            para el manejo de errores 
+
+        REVISON administrador.php 
+            como superusuario 
+            al eliminar err 
+            Error al eliminar administrador: 
+                SQLSTATE[23000]: Integrity constraint violation: 
+                1451 Cannot delete or update a parent row: 
+                a foreign key constraint fails 
+                (`calificaciones`.`logs`, CONSTRAINT `logs_ibfk_1` FOREIGN KEY (`id_usu`) REFERENCES `usuarios` (`id_usu`))
+        CREACION edita_super.php 
+            para cbios de todo el perfil menos id 
+CREANDO RAMOS 
+    ingresando como profesor  
+    deben aparecer menu ramos
+    listo crud ramos creado por profesor 
+REVISAR REGISTRO al crear ramo
